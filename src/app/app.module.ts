@@ -7,6 +7,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ContainerComponent } from './components/container/container.component';
 import { InfoHomeComponent } from './services/info-home/info-home.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
     HomeComponent,
     ContainerComponent,
     InfoHomeComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
