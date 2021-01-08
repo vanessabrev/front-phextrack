@@ -1,3 +1,4 @@
+
 <nav class="navbar">
   <span class="navbar-toggle" id="js-navbar-toggle" (click)="ativeToggle($event)">
     <!-- <i class="fas fa-bars"></i> -->
@@ -6,19 +7,21 @@
   <a href="#" class="logo-div"><img src="assets/logo-phextrack.png" alt="Logomarca da Phex Track" class="logo"></a>
   <ul class="main-nav" id="js-menu">
     <li>
-      <a href="#" class="nav-links">Home</a>
+      <a (click)="moveScrollTransition($event)" class="nav-links">Home</a>
+    </li>
+   
+    <li>
+      <a href="#products" class="nav-links scrollSuave">Products</a>
     </li>
     <li>
-      <a href="#" class="nav-links">Products</a>
+      <a href="#about" class="nav-links scrollSuave">About Us</a>
     </li>
     <li>
-      <a href="#" class="nav-links">About Us</a>
+      <a (click)="moveScrollTransition($event)" class="nav-links">Contact Us</a>
     </li>
     <li>
-      <a href="#" class="nav-links">Contact Us</a>
-    </li>
-    <li>
-      <a href="#" class="nav-links">Blog</a>
+      <a id="test" href="#blog" class="nav-links">Blog</a>
     </li>
   </ul>
 </nav>
+
