@@ -1,4 +1,3 @@
-
 <nav class="navbar">
   <span class="navbar-toggle" id="js-navbar-toggle" (click)="ativeToggle($event)">
     <!-- <i class="fas fa-bars"></i> -->
@@ -6,10 +5,16 @@
   </span>
   <a href="#" class="logo-div"><img src="assets/logo-phextrack.png" alt="Logomarca da Phex Track" class="logo"></a>
   <ul class="main-nav" id="js-menu">
-    <li>
+
+    <li *ngFor="let menu of listMenus" id="{{menu.reference}}">
+      <a class="nav-links">{{menu.name}}</a>
+    </li>
+
+
+    <!-- <li>
       <a (click)="moveScrollTransition($event)" class="nav-links">Home</a>
     </li>
-   
+
     <li>
       <a href="#products" class="nav-links scrollSuave">Products</a>
     </li>
@@ -21,7 +26,6 @@
     </li>
     <li>
       <a id="test" href="#blog" class="nav-links">Blog</a>
-    </li>
+    </li> -->
   </ul>
 </nav>
-
