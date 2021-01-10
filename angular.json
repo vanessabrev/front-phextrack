@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "phextrack"
+    }
+  },
+  "defaultProject": "phextrack",
+  "cli": {
+    "analytics": "4d7f7e09-85a0-4d1f-bd8e-9203096729b1"
+  }
 }
