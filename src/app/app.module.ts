@@ -9,6 +9,8 @@ import { ContainerComponent } from './components/container/container.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { ButtonComponent } from './components/button/button.component';
+import { CardProductsComponent } from './components/card-products/card-products.component';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
     ContainerComponent,
     PageNotFoundComponent,
     MenuComponent,
-    CardComponent
+    CardComponent,
+    ButtonComponent,
+    CardProductsComponent
   ],
   imports: [
     BrowserModule,
