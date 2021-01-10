@@ -4,9 +4,19 @@
   font-size: 18px;
   // background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%); //COR GRADIENTE
   // background-color: #fff;
+  font-family: "Poppins", sans-serif;
   border: 1px solid rgba(0, 0, 0, 0.2);
   padding-bottom: 10px;
 }
+
+
+// FIXME: utilizado para o drop down do menu
+// .navbar .drop-down .drop-down > a:after {
+//   content: "\eaa0";
+//   font-family: IcoFont;
+//   position: absolute;
+//   right: 15px;
+// }
 
 .main-nav {
   list-style-type: none;

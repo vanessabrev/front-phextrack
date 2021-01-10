@@ -2,4 +2,28 @@
 
 body {
   margin: 0;
+  font-family: "Open Sans", sans-serif;
+  color: #313030;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+//FIXME: titulos das sections
+.section-title h2 {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  padding-bottom: 0;
+  font-family: "Poppins", sans-serif;
+  color: #635551;
+}
+
+// font-family: "Raleway", sans-serif; // FIXME: foi utilizado no botão "Get started", botão "buy",
+//
