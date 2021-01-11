@@ -1,14 +1,17 @@
 @import "../../shared/variables";
 
 .navbar {
-  font-size: 18px;
-  // background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%); //COR GRADIENTE
-  // background-color: #fff;
-  font-family: "Poppins", sans-serif;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  top: 0;
+  position: fixed;
+  width: 100vw;
   padding-bottom: 10px;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  justify-content: center;
+  background-image: linear-gradient(360deg, #fff 0%, rgb(217, 233, 243) 50%, #fff 100%); //COR GRADIENTE
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
-
 
 // FIXME: utilizado para o drop down do menu
 // .navbar .drop-down .drop-down > a:after {
@@ -69,6 +72,7 @@
     margin-right: 30px;
     flex-direction: row;
     justify-content: flex-end;
+    cursor: pointer;
   }
 
   .main-nav li {

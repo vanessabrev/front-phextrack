@@ -1,0 +1,11 @@
+<label for="avatar">Escolha uma imagem para converter:</label>
+
+<p>
+  <input placeholder="Escolha o arquivo" class="input-file" type="file" accept="image/png, image/jpeg"
+    (change)="onFileChange($event)">
+</p>
+
+<div class="form-textarea">
+  <textarea #textBase64>{{convertedText}}</textarea>
+  <button (click)="copyInputMessage(textBase64)" value="click to copy">Copiar o texto</button>
+</div>
