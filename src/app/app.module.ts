@@ -12,6 +12,7 @@ import { ConvertBase64Component } from './components/convert-base64/convert-base
 import { MenuComponent } from './components/menu/menu.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { ContactsComponent } from './components/contacts/contacts.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
     CardComponent,
     ButtonComponent,
     CardProductsComponent,
-    ConvertBase64Component
+    ConvertBase64Component,
+    ContactsComponent
   ],
   imports: [
     BrowserModule,
