@@ -35,10 +35,4 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-
-  get getRequestUrl(): string {
-    return "http://127.0.0.1:8000/api";
-  }
-
-}
+export class AppModule { }
