@@ -13,7 +13,6 @@ export class MenuComponent implements OnInit, AfterViewInit {
 
   blog: any;
   listMenus: Array<MenuModel>;
-  apiOn = false;
 
   constructor(private infoService: InfoHomeService, @Inject(DOCUMENT) document: Document) {
     this.blog = document.getElementById("blog")
@@ -28,28 +27,11 @@ export class MenuComponent implements OnInit, AfterViewInit {
 
 
   ngOnInit(): void {
-    (this.apiOn) ? this.setListMenus() : this.setListMenusMock();
-
-    // FIXME: Esse trecho comentado é para o toggle do menu
-    // let mainNav = document.getElementById('js-menu');
-    // let navBarToggle = document.getElementById('js-navbar-toggle');
-
-    // navBarToggle.addEventListener('click', function () {
-    //   mainNav.classList.toggle('active');
-    // });
+    this.initEventsListeners();
   }
 
-  setListMenusMock(): void { //TODO: REMOVER ESSE METODO QUANDO TIVER API FUNCIONANDO
-    let menus = new Array<MenuModel>();
-    menus = [
-      { name: 'Home', reference: '#home', position: 0 },
-      { name: 'About', reference: '#about', position: 1 },
-      { name: 'Services', reference: '#services', position: 3 },
-      { name: 'Contacts', reference: '#contacts', position: 4 }
-    ];
-
-    this.listMenus = menus;;
-
+  initEventsListeners(): void {
+    this.setListMenus();
   }
 
   setListMenus(): void {
@@ -81,8 +63,6 @@ export class MenuComponent implements OnInit, AfterViewInit {
 
   sortMenuList(menuList: Array<MenuModel>): Array<MenuModel> {
     return menuList.sort((n1, n2) => n1.position - n2.position);
-    //  menuList.sort((a, b) => this.compareSort(a.filial, b.filial, true));
-
   }
 
 }
