@@ -11,6 +11,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { ButtonComponent } from './components/button/button.component';
 import { CardProductsComponent } from './components/card-products/card-products.component';
+import { CarouselPartnersComponent } from './components/carousel-partners/carousel-partners.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { CardProductsComponent } from './components/card-products/card-products.
     MenuComponent,
     CardComponent,
     ButtonComponent,
-    CardProductsComponent
+    CardProductsComponent,
+    CarouselPartnersComponent
   ],
   imports: [
     BrowserModule,
