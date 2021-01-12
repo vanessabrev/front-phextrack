@@ -17,13 +17,7 @@ export class InfoHomeService {
   constructor(
     private httpClient: HttpClient,
   ) {
-    this.initEventListener();
-  }
-
-  initEventListener() { // Metodo para organizar as chamadas do métodos na inicialização do serviço
-      this.getMenus();
-    // this.getContatos(); // TODO: criar requisição na api para buscar as informações de contatos
-    // this.getProdutos();  // TODO: criar requisição na api para buscar as informações dos produtos
+    this.getMenus();
   }
 
   getMenus(): void {
@@ -32,7 +26,4 @@ export class InfoHomeService {
         this.menusSubject.next(menus);
       });
   }
-
-  getProdutos(): void { }
-  getContatos(): void { }
 }

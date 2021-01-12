@@ -1,46 +1,15 @@
 <div fxLayout="row wrap" fxLayoutAlign="center center ">
 
-  <div class="card-product margin-top efecct-lux">
-    <div class="title-product"> Plano 2 </div>
-    <h3> <sup>$</sup>19<span> / month</span> </h3>
-
+  <div class="card-product margin-top efecct-lux" *ngFor="let product of listProducts">
+    <div class="title-product"> {{ product.name }} </div>
+    <img class="img-product" [src]="product.image" />
+    <h3> {{ product.price | currency:'BRL':true:'1.2-2' }} <span> / month</span> </h3>
     <div class="card-item">
       <p><strong>50</strong> Serviço 1 </p>
       <p><strong>35</strong> Serviço 2 </p>
       <p><strong>40</strong> Serviço 4 </p>
       <p><strong>10</strong> Serviço 3 </p>
-      <p><strong> Limited</strong> Support</p>
-
-      <app-button> </app-button>
-    </div>
-  </div>
-
-
-  <div class="card-product margin-top efecct-lux">
-    <div class="title-product"> Plano 2 </div>
-    <h3> <sup>$</sup>19<span> / month</span> </h3>
-
-    <div class="card-item">
-      <p><strong>50</strong> Serviço 1 </p>
-      <p><strong>35</strong> Serviço 2 </p>
-      <p><strong>40</strong> Serviço 4 </p>
-      <p><strong>10</strong> Serviço 3 </p>
-      <p><strong> Limited</strong> Support</p>
-
-      <app-button> </app-button>
-    </div>
-  </div>
-
-  <div class="card-product margin-top efecct-lux">
-    <div class="title-product"> Plano 2 </div>
-    <h3> <sup>$</sup>19<span> / month</span> </h3>
-
-    <div class="card-item">
-      <p><strong>50</strong> Serviço 1 </p>
-      <p><strong>35</strong> Serviço 2 </p>
-      <p><strong>40</strong> Serviço 4 </p>
-      <p><strong>10</strong> Serviço 3 </p>
-      <p><strong> Limited</strong> Support</p>
+      <p> {{ product.description }}</p>
 
       <app-button> </app-button>
     </div>
