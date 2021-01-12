@@ -14,6 +14,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { CarouselPartnersComponent } from './components/carousel-partners/carousel-partners.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
+import { SendEmailComponent } from './components/contacts/send-email/send-email.component';
+import { InfoContactsComponent } from './components/contacts/info-contacts/info-contacts.component';
+import { PostalCodePipe } from './pipes/postal-code.pipe';
 
 
 @NgModule({
@@ -28,7 +31,10 @@ import { ContactsComponent } from './components/contacts/contacts.component';
     CardProductsComponent,
     CarouselPartnersComponent,
     ConvertBase64Component,
-    ContactsComponent
+    ContactsComponent,
+    SendEmailComponent,
+    InfoContactsComponent,
+    PostalCodePipe
   ],
   imports: [
     BrowserModule,
