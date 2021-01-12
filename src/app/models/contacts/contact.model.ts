@@ -1,10 +1,9 @@
-import { Address } from "./address.model";
 
 // Esse modelo sera utilizado no front para tratar as informaceos organizadas em arrays dentro dessa aplicacao.
 export class Contact {
-  address: Array<Address>;
-  phones: Array<{ phone: string }>;
-  emails: Array<{ email: string }>;
+  address: string;
+  phones: string;
+  emails: string;
 }
 
 // Esse modelo sera o contrato entre o front e api.
