@@ -11,7 +11,7 @@ export class ContactService {
 
   readonly api = environment.apiUrl;
 
-  private contactsSubject = new Subject<Array<ContactResponse>>();
+  private contactsSubject = new Subject<ContactResponse>();
   contact$ = this.contactsSubject.asObservable();
 
   constructor(
@@ -23,8 +23,7 @@ export class ContactService {
   getContacts(): void {
     this.httpClient.get<ContactResponse>(`${this.api}/contacts`)
       .toPromise().then((contacts: ContactResponse) => {
-        console.log('contacts', contacts)
-        // this.menusSubject.next(menus);
+        this.contactsSubject.next(contacts[0]);
       });
   }
 }
