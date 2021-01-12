@@ -5,10 +5,13 @@ import { Injectable } from '@angular/core';
 })
 export class ConcatenateTextService {
 
+  RULE_SPLIT_TEXT = '<&>';
+
+
   constructor() { }
 
   // TODO: verificar essa tipagem
-  disengageText(values: any): string {
+  concatenateText(values: any): string {
     let concatenatedText = "";
     let arrayValues = Object.entries(values)
 
@@ -19,5 +22,7 @@ export class ConcatenateTextService {
     return concatenatedText;
   }
 
-  concatenateText(): void { };
+  disengageText(text: string): any {
+    return text.split(this.RULE_SPLIT_TEXT);
+  }
 }
