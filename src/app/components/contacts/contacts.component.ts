@@ -60,7 +60,7 @@ export class ContactsComponent implements OnInit {
 
 
     this.listContactsInfosAux.push({
-      icon: 'iconAddress', title: 'tittle address', information: addressProccessed
+      icon: 'map-marker', title: 'Endereço', information: addressProccessed
     });
   }
 
@@ -72,7 +72,7 @@ export class ContactsComponent implements OnInit {
     });
 
     this.listContactsInfosAux.push({
-      icon: 'iconPhones', title: 'tittle phones', information: phonesProccessed
+      icon: 'phone', title: 'Telefone(s)', information: phonesProccessed
     });
   }
 
@@ -84,7 +84,7 @@ export class ContactsComponent implements OnInit {
     });
 
     this.listContactsInfosAux.push({
-      icon: 'iconEmails', title: 'tittle emails', information: emailsProccessed
+      icon: 'envelope', title: 'Emails', information: emailsProccessed
     });
   }
 
