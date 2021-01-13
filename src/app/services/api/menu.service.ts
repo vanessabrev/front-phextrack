@@ -2,12 +2,12 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { MenuModel } from '../models/menu.model';
+import { MenuModel } from '../../models/menu.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class InfoHomeService {
+export class MenuService {
 
   readonly api = environment.apiUrl;
 
