@@ -1,5 +1,9 @@
-<div class="card-info" >
-  <i>[ {{ icon }} ]</i>
-  <h3>{{ title }}</h3>
-  <p>{{ information }}</p>
+<div class="card-info" fxLayout="column" fxLayout.xs="column">
+  <div fxLayout="row">
+    <i class="fa-2x fa fa-{{ icon }}"></i>
+    <h3>{{ title }}</h3>
+  </div>
+ <div fxLayout="row" fxLayoutAlign="space-around center" >
+    <p>{{ information }}</p>
+  </div>
 </div>
