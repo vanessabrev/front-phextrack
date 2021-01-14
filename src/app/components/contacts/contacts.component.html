@@ -1,18 +1,9 @@
-<p>contacts works!</p>
 
-
-<div>
-
-  <!-- TODO: transformar em row -->
-  <div fxLayout="row wrap" fxLayoutAlign="center center ">
-    <app-info-contacts
-      *ngFor="let contactInfo of listContactsInfos"
-      [icon]="contactInfo.icon"
-      [title]="contactInfo.title"
-      [information]="contactInfo.information">
+<div fxFlex="100" fxLayout="column" fxLayoutAlign="center center"  class="contact">
+  <div fxLayout="row wrap" fxLayoutAlign="center center">
+    <app-info-contacts *ngFor="let contactInfo of listContactsInfos" [icon]="contactInfo.icon"
+      [title]="contactInfo.title" [information]="contactInfo.information">
     </app-info-contacts>
-
   </div>
-
-  <app-send-email></app-send-email>
+  <app-send-email class="send-email" fxLayout="row wrap" fxLayoutAlign="center center"></app-send-email>
 </div>

@@ -1,0 +1,2 @@
+<input #inputText type="text" (keyup)="addValueText(inputText.value)" [placeholder]="placeholder"
+  data-rule="minlen:4" required oninvalid="this.setCustomValidity('Preencha esse campo.')">

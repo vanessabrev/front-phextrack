@@ -13,11 +13,13 @@ import { InfoContactsComponent } from './components/contacts/info-contacts/info-
 import { SendEmailComponent } from './components/contacts/send-email/send-email.component';
 import { ContainerComponent } from './components/container/container.component';
 import { ConvertBase64Component } from './components/convert-base64/convert-base64.component';
+import { AreatextComponent } from './components/form/areatext/areatext.component';
+import { InputTextComponent } from './components/form/input-text/input-text.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
-import { PostalCodePipe } from './pipes/postal-code.pipe';
 import { InfoContactsPipe } from './pipes/info-contacts.pipe';
+import { PostalCodePipe } from './pipes/postal-code.pipe';
 
 
 @NgModule({
@@ -36,7 +38,9 @@ import { InfoContactsPipe } from './pipes/info-contacts.pipe';
     SendEmailComponent,
     InfoContactsComponent,
     PostalCodePipe,
-    InfoContactsPipe
+    InfoContactsPipe,
+    InputTextComponent,
+    AreatextComponent
   ],
   imports: [
     BrowserModule,

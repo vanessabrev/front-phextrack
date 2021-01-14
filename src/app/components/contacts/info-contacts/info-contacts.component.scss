@@ -4,14 +4,21 @@
   // color: #313030;
   color: $primary;
   box-shadow: 0 0 5px $box-shadow-color;
-  padding: 20px;
-  margin: 1rem;
-  width: 300px;
-  height: 170px;
+  padding: 0.5rem;
+  margin: 1rem 0.5rem;
+  width: 299px;
+  height: 160px;
 }
 
 h3 {
   margin-left: 20px;
+}
+
+.icon-title {
+  margin: {
+    left: .5rem;
+    top: .5rem;
+  }
 }
 
 .icon {
@@ -32,6 +39,7 @@ h3 {
   }
 }
 
-.information{
+.information {
   font-size: 14px;
+  margin-left: .5rem;
 }

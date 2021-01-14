@@ -1,11 +1,11 @@
 <div class="card-info" fxLayout="column" fxLayout.xs="column">
-  <div fxLayout="row">
+  <div fxLayout="row" class="icon-title">
     <div class="icon">
       <i class="fa-2x fa fa-{{ icon }}"></i>
     </div>
     <h3>{{ title }}</h3>
   </div>
-  <div fxLayout="row" fxLayoutAlign="space-around start">
+  <div fxLayout="row" fxLayoutAlign="start center">
     <p class="information">{{ information | infoContacts:title:information }}</p>
   </div>
 </div>
