@@ -1,18 +1,20 @@
 <!-- <div action="mailto:josielsifa@gmail.com" method="post" enctype="text/plain"> -->
+<div class="card-form" fxLayout="column" fxLayout.xs="column" >
+  <form>
+    <div fxLayout="row wrap">
+      <app-input-text fxFlex="50" (valueText)='setValueName($event)' placeholder='Digite o seu nome'></app-input-text>
+      <app-input-text fxFlex="50" (valueText)='setValueEmail($event)' placeholder='Digite o seu email'></app-input-text>
+    </div>
 
-<form fxLayout="column" fxLayout.xs="column" fxFlex="82">
-  <div fxLayout="row wrap">
-    <app-input-text fxFlex="50" (valueText)='setValueName($event)' placeholder='Digite o seu nome'></app-input-text>
-    <app-input-text fxFlex="50" (valueText)='setValueEmail($event)' placeholder='Digite o seu email'></app-input-text>
-  </div>
+    <div fxLayout="row wrap" fxLayoutAlign="space-around center">
+      <app-areatext fxFlex="100" (valueText)='setValueMessage($event)' placeholder='Digite a sua mensagem'>
+      </app-areatext>
+    </div>
 
-  <div fxLayout="row wrap" fxLayoutAlign="space-around center">
-    <app-areatext fxFlex="100" (valueText)='setValueMessage($event)' placeholder='Digite a sua mensagem'></app-areatext>
-  </div>
-
-  <div fxLayout="row wrap" fxLayoutAlign="end center" class="buttons">
-    <app-button (click)="sendEmail()"> </app-button>
-    <div fxFlex="5"></div>
-    <app-button text="Limpar"> </app-button>
-  </div>
-</form>
+    <div fxLayout="row wrap" fxLayoutAlign="end center" class="buttons">
+      <app-button (click)="sendEmail()"> </app-button>
+      <div fxFlex="5"></div>
+      <app-button text="Limpar"> </app-button>
+    </div>
+  </form>
+</div>
