@@ -1,31 +1,22 @@
+$bkg-1: #fff;
+$bkg-2: #efefef;
 
-.test {
-    position: relative;
-    background-color: red;
-    padding-top: 200px;
-    padding-bottom: 200px;
+section {
+  padding: 3vh;
 }
-.test1 {
-    position: relative;
-    background-color: blue;
-    padding-top: 200px;
-    padding-bottom: 200px;
+
+.section-home {
+  margin-top: 70px;
 }
-.test2 {
-    position: relative;
-    background-color: green;
-    padding-top: 200px;
-    padding-bottom: 200px;
+
+app-title {
+  width: 100%;
 }
-.test3 {
-    position: relative;
-    background-color: black;
-    padding-top: 200px;
-    padding-bottom: 200px;
+
+.bkg-1 {
+  background-color: $bkg-1;
 }
-.test4 {
-    position: relative;
-    background-color: purple;
-    padding-top: 200px;
-    padding-bottom: 200px;
+
+.bkg-2 {
+  background-color: $bkg-2;
 }

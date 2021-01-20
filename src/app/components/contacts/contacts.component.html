@@ -1,5 +1,5 @@
 
-<div fxFlex="100" fxLayout="column" fxLayoutAlign="center center"  class="contact">
+<div fxFlex="100" fxLayout="row wrap" fxLayoutAlign="space-around start">
   <div fxLayout="row wrap" fxLayoutAlign="center center">
     <app-info-contacts *ngFor="let contactInfo of listContactsInfos" [icon]="contactInfo.icon"
       [title]="contactInfo.title" [information]="contactInfo.information">
