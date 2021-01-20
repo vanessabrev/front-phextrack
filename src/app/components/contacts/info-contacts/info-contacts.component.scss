@@ -16,8 +16,8 @@ h3 {
 
 .icon-title {
   margin: {
-    left: .5rem;
-    top: .5rem;
+    left: 0.5rem;
+    top: 0.5rem;
   }
 }
 
@@ -39,7 +39,23 @@ h3 {
   }
 }
 
+.icon:hover {
+  animation-name: spin;
+  animation-duration: 500ms;
+  animation-iteration-count: initial;
+  animation-timing-function: linear;
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
 .information {
   font-size: 14px;
-  margin-left: .5rem;
+  margin-left: 0.5rem;
 }
