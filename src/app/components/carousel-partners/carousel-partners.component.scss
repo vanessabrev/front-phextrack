@@ -61,5 +61,14 @@ $animationSpeed: 40s;
   .slide {
     height: 100px;
     width: 250px;
+
+    img {
+      filter: grayscale(100%);
+      transition: 0.3s;
+    }
+
+    img:hover {
+      filter: grayscale(0);
+    }
   }
 }
