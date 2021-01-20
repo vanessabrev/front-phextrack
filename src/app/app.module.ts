@@ -21,6 +21,7 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 import { InfoContactsPipe } from './pipes/info-contacts.pipe';
 import { PostalCodePipe } from './pipes/postal-code.pipe';
 import { ImageUploadComponent } from './components/image-upload/image-upload.component';
+import { SocialMediasComponent } from './components/social-medias/social-medias.component';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { ImageUploadComponent } from './components/image-upload/image-upload.com
     InfoContactsPipe,
     InputTextComponent,
     AreatextComponent,
-    ImageUploadComponent
+    ImageUploadComponent,
+    SocialMediasComponent
   ],
   imports: [
     BrowserModule,

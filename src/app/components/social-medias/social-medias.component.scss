@@ -1,0 +1,33 @@
+@import "../../shared/variables";
+
+.social-medias {
+  color: #fff;
+  font-size: 14px;
+  background: rgb(129, 129, 129);
+  padding: 20px;
+  margin-top: 10px;;
+}
+
+.copyright, .credits a {
+  color: #fff;
+}
+
+.social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: $primary;
+  color: #fff;
+  line-height: 1;
+  padding: 12px;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  transition: 0.3s;
+  width: 20px;
+}
+
+.social-links a:hover {
+  background: $primary-hover;
+  color: #fff;
+  text-decoration: none;
+}
