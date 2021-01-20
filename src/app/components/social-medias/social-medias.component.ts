@@ -11,7 +11,7 @@ export class SocialMediasComponent implements OnInit {
 
   constructor(private socialMediaService: SocialMediasService) { }
 
-  listSocialMedias: SocialMedia;
+  listSocialMedias = new SocialMedia();
 
   ngOnInit(): void {
     this.setSocialMedias();
