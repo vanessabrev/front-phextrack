@@ -90,6 +90,10 @@ app-title {
 
 .card-about {
   width: 100%;
-  margin: -100px 20vw 0 20vw;
+  margin-top: -100px;
   z-index: 1;
+}
+
+.card-item {
+  margin: 1rem;
 }
