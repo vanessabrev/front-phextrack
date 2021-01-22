@@ -8,8 +8,12 @@ sup {
 
 .img-product {
   width: 30vw;
-  margin: 1vw;
+  min-width: 300px;
+  margin: 1vw auto;
   border-radius: 50px 0px 50px 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 span {
