@@ -23,6 +23,7 @@ import { PostalCodePipe } from './pipes/postal-code.pipe';
 import { ImageUploadComponent } from './components/image-upload/image-upload.component';
 import { SocialMediasComponent } from './components/social-medias/social-medias.component';
 import { TitleComponent } from './components/title/title.component';
+import { ButtonRoundedComponent } from './components/button-rounded/button-rounded.component';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { TitleComponent } from './components/title/title.component';
     AreatextComponent,
     ImageUploadComponent,
     SocialMediasComponent,
-    TitleComponent
+    TitleComponent,
+    ButtonRoundedComponent
   ],
   imports: [
     BrowserModule,

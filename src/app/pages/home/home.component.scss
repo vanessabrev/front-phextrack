@@ -87,3 +87,13 @@ app-title {
 .bkg-2 {
   background-color: $bkg-2;
 }
+
+.card-about {
+  width: 100%;
+  margin-top: -100px;
+  z-index: 1;
+}
+
+.card-item {
+  margin: 1rem;
+}

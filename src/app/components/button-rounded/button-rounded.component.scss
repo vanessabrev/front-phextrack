@@ -1,0 +1,26 @@
+@import "../../shared/variables";
+
+.btn-group .button {
+  background-color: $primary;
+  border: none;
+  color: white;
+  padding: 0.6rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 1px 1px 1px #888888;
+  border-radius: 5rem;
+
+  i {
+    margin-left: 0.5rem;
+  }
+}
+
+.btn-group .button:hover {
+  // background-color: $primary-hover;
+ filter: brightness(85%);
+}
