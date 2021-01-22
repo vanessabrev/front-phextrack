@@ -10,6 +10,9 @@ export class TitleComponent{
   @Input()
   title: string = "Title";
 
+  @Input()
+  titleColor: string;
+
   constructor() { }
 
 }
