@@ -2,9 +2,8 @@
 
 
 <!-- HOME -->
-<section class="bkg-2 section-home" id="home" fxLayout="row" fxLayoutAlign="space-between center">
-  <div fxFlex></div>
-  <div class="main-cover" fxFlex="70">
+<section class="bkg-section-2 section-home" id="home" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutAlign.gt-sm="center center">
+  <div class="main-cover">
     <div fxLayout="row" fxLayoutAlign="start center">
       <h1 class="main-title">Bem vindo a Phex Track!</h1>
     </div>
@@ -20,13 +19,12 @@
       </div>
     </div>
   </div>
-  <div fxFlex></div>
 </section>
 
-<!-- ABOUT US -->
-<section class="bkg-1" id="about" fxLayout.gt-sm="row" fxLayout="row wrap" fxLayoutAlign="center center">
+<!-- INFO HOME -->
+<section class="bkg-section-1" id="about" fxLayout.gt-sm="row" fxLayout="row wrap" fxLayoutAlign="center center">
 
-  <app-card fxFlex="100" fxFlex.gt-sm="40" class="card-about" title="titulo1" titleColor="#fff"
+  <app-card fxFlex="100" fxFlex.gt-sm="40" class="card-info-home" title="titulo1" titleColor="#fff"
     text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." textColor="
     #fff" color="#264173" buttonName="Continuar" buttonColor="#52678f"></app-card>
   <app-card fxFlex="100" fxFlex.gt-sm="20" fxFlex.gt-xs="80" class="card-item" icon="arrow-up" [titleSize]="20" [textSize]="14"></app-card>
@@ -34,19 +32,19 @@
   <app-card fxFlex="100" fxFlex.gt-sm="20" fxFlex.gt-xs="80" class="card-item" icon="arrow-up" [titleSize]="20" [textSize]="14"></app-card>
 </section>
 
-<!-- SERVICES  -->
-<section class="bkg-2" id="service" fxLayout="column" fxLayoutAlign="space-around start">
-  <app-title title="Serviços"></app-title>
+<!-- ABOUT US  -->
+<section class="bkg-section-2" id="aboutus" fxLayout="column" fxLayoutAlign="space-around start">
+  <app-title title="Sobre Nós"></app-title>
 </section>
 
 <!-- PRODUTOS -->
-<section class="bkg-1" id="products" fxLayout="column" fxLayoutAlign="pace-around start">
+<section class="bkg-section-1" id="products" fxLayout="column" fxLayoutAlign="pace-around start">
   <app-title title="Produtos"></app-title>
   <app-card-products></app-card-products>
 </section>
 
 <!-- CONTATOS -->
-<section class="bkg-2" id="contact" fxLayout="column" fxLayoutAlign="space-around start">
+<section class="bkg-section-2" id="contact" fxLayout="column" fxLayoutAlign="space-around start">
   <app-title title="Contatos"></app-title>
   <app-contacts></app-contacts>
 </section>

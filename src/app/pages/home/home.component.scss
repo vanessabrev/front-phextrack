@@ -1,11 +1,8 @@
 @import "../../shared/variables";
 
-$bkg-1: #fff;
-$bkg-2: #efefef;
-
 section {
   margin: auto;
-  max-width: 1140px;
+  max-width: $max-width-content;
 }
 
 .section-home {
@@ -16,12 +13,13 @@ section {
   position: relative;
   margin: 0;
   max-width: 2000px;
-  // margin-bottom: -120px; //ESSE MARGIN BOTTON PARA FAZER O EFEITO DO CONTAINER AZUL ENTRAR NA SECTION MAIN
 
   .main-cover {
     z-index: 1;
     color: #fff;
     font-family: "Raleway", sans-serif;
+    width: 100%;
+    max-width: $max-width-content;
 
     .main-title {
       margin: 50px 0 0 0;
@@ -82,15 +80,15 @@ app-title {
   width: 100%;
 }
 
-.bkg-1 {
-  background-color: $bkg-1;
+.bkg-section-1 {
+  background-color: $bkg-section-1;
 }
 
-.bkg-2 {
-  background-color: $bkg-2;
+.bkg-section-2 {
+  background-color: $bkg-section-2;
 }
 
-.card-about,
+.card-info-home,
 .card-item {
   margin-top: -70px;
   margin-bottom: 1rem;
@@ -107,5 +105,15 @@ app-title {
 @media screen and (min-width: 960px) {
   .card-item {
     margin: -70px 1rem 1rem 1rem;
+  }
+}
+
+
+@media screen and (max-width: 960px) {
+  section, .main-cover {
+    margin: {
+      left: 1rem;
+      right: 1rem;
+    }
   }
 }
