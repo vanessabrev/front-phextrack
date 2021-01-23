@@ -1,33 +1,26 @@
 <div class="slideshow-container" fxLayout="row" fxLayoutAlign="center center">
 
-  <div *ngIf="slideIndex === 1" class="mySlides fade">
+  <div *ngIf="slideIndex === 1" class="fade">
     <div class="numbertext">1 / 3</div>
-    <img src="../../../assets/about-gallery/image-1.jpg" style="width:100%">
-    <div class="text">Caption Text
-
-
-      <div style="text-align:center">
-        <span [ngClass]="{active: slideIndex === 1}" class="dot" (click)="currentSlide(1)"></span>
-        <span [ngClass]="{active: slideIndex === 2}" class="dot" (click)="currentSlide(2)"></span>
-        <span [ngClass]="{active: slideIndex === 3}" class="dot" (click)="currentSlide(3)"></span>
-      </div>
-    </div>
+    <img alt="image" src="../../../assets/about-gallery/image-1.jpg">
   </div>
 
-  <div *ngIf="slideIndex === 2" class="mySlides fade">
+  <div *ngIf="slideIndex === 2" class="fade">
     <div class="numbertext">2 / 3</div>
-    <img src="../../../assets/about-gallery/image-2.jpg" style="width:100%">
-    <div class="text">Caption Two</div>
+    <img alt="image" src="../../../assets/about-gallery/image-2.jpg">
   </div>
 
-  <div *ngIf="slideIndex === 3" class="mySlides fade">
+  <div *ngIf="slideIndex === 3" class="fade">
     <div class="numbertext">3 / 3</div>
-    <img src="../../../assets/about-gallery/image-3.jpg" style="width:100%">
-    <div class="text">Caption Three</div>
+    <img alt="image" src="../../../assets/about-gallery/image-3.jpg">
   </div>
 
   <a class="prev" (click)="prevSlide()">&#10094;</a>
   <a class="next" (click)="nextSlide()">&#10095;</a>
-
+  <div class="current-slide">
+    <span [ngClass]="{active: slideIndex === 1}" class="dot" (click)="currentSlide(1)"></span>
+    <span [ngClass]="{active: slideIndex === 2}" class="dot" (click)="currentSlide(2)"></span>
+    <span [ngClass]="{active: slideIndex === 3}" class="dot" (click)="currentSlide(3)"></span>
+  </div>
 </div>
 <br>

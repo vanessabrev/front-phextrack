@@ -76,7 +76,7 @@ section {
   height: 100%;
 }
 
-.card-products{
+.card-products {
   width: 100%;
 }
 
@@ -112,9 +112,9 @@ app-title {
   }
 }
 
-
 @media screen and (max-width: 960px) {
-  section, .main-cover {
+  section,
+  .main-cover {
     margin: {
       left: 1rem;
       right: 1rem;

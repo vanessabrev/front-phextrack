@@ -1,5 +1,8 @@
 img {
   vertical-align: middle;
+  border-radius: 5px;
+  width: 100%;
+  max-height: 330px;
 }
 
 /* Slideshow container */
@@ -23,8 +26,12 @@ img {
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
   user-select: none;
+}
+
+.prev {
+  left: 0;
+  border-radius: 0 3px 3px 0;
 }
 
 /* Position the "next button" to the right */
@@ -39,17 +46,6 @@ img {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
 /* Number text (1/3 etc) */
 .numbertext {
   color: #f2f2f2;
@@ -57,6 +53,11 @@ img {
   padding: 8px 12px;
   position: absolute;
   top: 0;
+}
+
+.current-slide {
+  position: absolute;
+  bottom: 0;
 }
 
 /* The dots/bullets/indicators */
@@ -105,8 +106,7 @@ img {
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .prev,
-  .next,
-  .text {
+  .next {
     font-size: 11px;
   }
 }
