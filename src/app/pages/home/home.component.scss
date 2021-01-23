@@ -4,7 +4,8 @@ $bkg-1: #fff;
 $bkg-2: #efefef;
 
 section {
-  padding: 3vh;
+  margin: auto;
+  max-width: 1140px;
 }
 
 .section-home {
@@ -13,13 +14,14 @@ section {
   background-size: cover;
   height: 60vh;
   position: relative;
+  margin: 0;
+  max-width: 2000px;
   // margin-bottom: -120px; //ESSE MARGIN BOTTON PARA FAZER O EFEITO DO CONTAINER AZUL ENTRAR NA SECTION MAIN
 
   .main-cover {
     z-index: 1;
     color: #fff;
     font-family: "Raleway", sans-serif;
-    margin-left: 20%;
 
     .main-title {
       margin: 50px 0 0 0;
@@ -88,12 +90,22 @@ app-title {
   background-color: $bkg-2;
 }
 
-.card-about {
-  width: 100%;
-  margin-top: -100px;
+.card-about,
+.card-item {
+  margin-top: -70px;
+  margin-bottom: 1rem;
   z-index: 1;
+  min-width: 300px;
 }
 
 .card-item {
+  z-index: 1;
   margin: 1rem;
+  min-width: 200px;
+}
+
+@media screen and (min-width: 960px) {
+  .card-item {
+    margin: -70px 1rem 1rem 1rem;
+  }
 }
