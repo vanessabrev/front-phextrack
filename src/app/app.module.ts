@@ -24,6 +24,8 @@ import { ImageUploadComponent } from './components/image-upload/image-upload.com
 import { SocialMediasComponent } from './components/social-medias/social-medias.component';
 import { TitleComponent } from './components/title/title.component';
 import { ButtonRoundedComponent } from './components/button-rounded/button-rounded.component';
+import { AboutGalleryComponent } from './components/about-gallery/about-gallery.component';
+import { AboutItensInfoComponent } from './components/about-itens-info/about-itens-info.component';
 
 
 @NgModule({
@@ -48,7 +50,9 @@ import { ButtonRoundedComponent } from './components/button-rounded/button-round
     ImageUploadComponent,
     SocialMediasComponent,
     TitleComponent,
-    ButtonRoundedComponent
+    ButtonRoundedComponent,
+    AboutGalleryComponent,
+    AboutItensInfoComponent
   ],
   imports: [
     BrowserModule,
