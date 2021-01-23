@@ -1,6 +1,8 @@
 <!-- fxFlex="0 1 calc(33.3% - 11px)"   -->
 <div class="card" fxLayout.xs="column" [style.background-color]="color">
-  <app-title [title]="title" [titleColor]="titleColor"></app-title>
-  <p class="text" [style.color]="textColor">{{ text }}</p>
-  <app-button-rounded class="button" [text]="buttonName" [buttonColor]="buttonColor"></app-button-rounded>
+  <a *ngIf="icon" class="" fxLayout="row" fxLayoutAlign="center center"><i class="icon-start fa fa-arrow-right"></i></a>
+  <app-title [title]="title" [titleColor]="titleColor" [titleSize]="titleSize"></app-title>
+  <p class="text" [style.color]="textColor" [style.font-size]="textSize ? textSize + 'px' : fontSizeDefault">{{ text }}</p>
+  <app-button-rounded *ngIf="buttonName" class="button" [text]="buttonName" [buttonColor]="buttonColor">
+  </app-button-rounded>
 </div>

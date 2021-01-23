@@ -14,24 +14,35 @@ export class CardComponent implements OnInit {
   titleColor: string = '#000';
 
   @Input()
+  titleSize: string;
+
+  @Input()
   text: string = 'Lorem ipsum dolor sit am.';
 
   @Input()
   textColor: string = '#000';
 
   @Input()
+  textSize: string;
+
+  @Input()
   color: string = '#fff';
 
   @Input()
-  buttonName: string = 'Ver mais!';
+  buttonName: string;
 
   @Input()
   buttonColor?: string;
 
+  @Input()
+  icon: string;
+
+  fontSizeDefault = "1rem";
+
   constructor() { }
 
   ngOnInit(): void {
-    this.setDefaultMock();
+    // this.setDefaultMock();
   }
 
   setDefaultMock(): void {

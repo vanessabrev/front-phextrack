@@ -1,3 +1,5 @@
+@import "../../shared/variables";
+
 .card {
   background-color: #f7f7f7;
   padding: 1rem 1.5rem 2.5rem;
@@ -13,5 +15,12 @@
   .button {
     display: flex;
     justify-content: center;
+  }
+
+  .icon-start {
+    font-size: 25px;
+    text-align: center;
+    color: $primary;
+    width: 30px;
   }
 }
