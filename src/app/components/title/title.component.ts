@@ -13,6 +13,11 @@ export class TitleComponent{
   @Input()
   titleColor: string;
 
+  @Input()
+  titleSize: string;
+
+  fontSizeDefault = "2rem";
+
   constructor() { }
 
 }
