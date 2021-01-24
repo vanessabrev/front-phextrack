@@ -44,6 +44,13 @@ span {
   text-align: center;
   padding: 5vh;
 }
+//Regra criada para o card não ficar pequeno em telas menores que 600
+@media only screen and (max-width: 600px) {
+  .card-item {
+    padding: 10vh;
+  }
+}
+
 
 //Usado para fazer o efeito de MOUSE HOVER nos card do produto
 .efecct-lux:hover {
