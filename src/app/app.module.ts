@@ -2,6 +2,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutGalleryComponent } from './components/about-gallery/about-gallery.component';
@@ -20,6 +22,7 @@ import { AreatextComponent } from './components/form/areatext/areatext.component
 import { InputTextComponent } from './components/form/input-text/input-text.component';
 import { ImageUploadComponent } from './components/image-upload/image-upload.component';
 import { InfoHomeComponent } from './components/info-home/info-home.component';
+import { MainInfoComponent } from './components/main-info/main-info.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { SocialMediasComponent } from './components/social-medias/social-medias.component';
 import { TitleComponent } from './components/title/title.component';
@@ -27,8 +30,6 @@ import { HomeComponent } from './pages/home/home.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { InfoContactsPipe } from './pipes/info-contacts.pipe';
 import { PostalCodePipe } from './pipes/postal-code.pipe';
-import { MainInfoComponent } from './components/main-info/main-info.component';
-
 
 @NgModule({
   declarations: [
@@ -63,6 +64,9 @@ import { MainInfoComponent } from './components/main-info/main-info.component';
     AppRoutingModule,
     FlexLayoutModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
+
   ],
   providers: [],
   bootstrap: [AppComponent]

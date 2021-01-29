@@ -1,18 +1,27 @@
 import { Injectable } from '@angular/core';
+import { NotificationType } from 'src/app/models/notification.model';
+import * as statusCodes from '../shared/status-code-http.json';
+import { NotificationService } from './notification.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ErroLogService {
 
-  constructor() { }
+  constructor(private notificationService: NotificationService) { }
 
-  showError(err: Error, msg?: string): void {
+  showError(err: Error, service?: string): void {
     console.log("%c <-||FRONT ERRO||->", 'background: orange; color: white; display: block;', "\n \n" + err.message);
-    console.log('||msg||', msg)
+
+    const statusCodeArray = Object.entries(statusCodes["default"]);
+    const statusCodeFilter = statusCodeArray.filter(status => parseInt(status[0]) === err['status']);
+    const messageErro = 'Algo inesperado aconteceu! \n' + ' Service: ' + service + '\n' +statusCodeFilter[0][0] + ' : ' + statusCodeFilter[0][1];
+
+    this.showNotificationError(messageErro)
   }
 
-  showNotification( msg?: string): void {
-    console.log('||msg||', msg)
+  showNotificationError(message: string): void {
+    let type = NotificationType.error;
+    this.notificationService.showMessage({ message, type });
   }
 }

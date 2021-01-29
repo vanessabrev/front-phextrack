@@ -29,4 +29,14 @@ h6 {
 }
 
 // font-family: "Raleway", sans-serif; // FIXME: foi utilizado no botão "Get started", botão "buy",
-//
+
+// ajuste nas notificações do site
+#toast-container {
+  max-width: $max-width-content;
+
+  div {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+  }
+}
