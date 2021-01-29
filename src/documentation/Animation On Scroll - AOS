@@ -1,0 +1,39 @@
+I'm trying to get the same thing working for a site I'm migrating to Angular 4.2.4. Since you included the path to the AOS stylesheet in your angular.cli.json you probably already installed AOS via:
+
+npm install aos --save
+I got it running with the following:
+
+// angular.cli.json
+...
+"styles": [
+  "../node_modules/aos/dist/aos.css",
+  "styles.scss"
+],
+"scripts": [],
+...
+and:
+
+// app.component.ts
+import { Component, OnInit } from '@angular/core';
+
+import * as AOS from 'aos';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
+})
+export class AppComponent implements OnInit {
+  title = 'app';
+
+  ngOnInit() {
+    AOS.init();
+  }
+}
+and in my case I have markup in a HomeComponent:
+
+// home.component.html
+...
+<div data-aos="fade-up" data-aos-once="true">
+  the content
+</div>
