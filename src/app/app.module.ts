@@ -27,6 +27,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { InfoContactsPipe } from './pipes/info-contacts.pipe';
 import { PostalCodePipe } from './pipes/postal-code.pipe';
+import { MainInfoComponent } from './components/main-info/main-info.component';
 
 
 @NgModule({
@@ -54,7 +55,8 @@ import { PostalCodePipe } from './pipes/postal-code.pipe';
     ButtonRoundedComponent,
     AboutGalleryComponent,
     AboutItensInfoComponent,
-    InfoHomeComponent
+    InfoHomeComponent,
+    MainInfoComponent
   ],
   imports: [
     BrowserModule,
