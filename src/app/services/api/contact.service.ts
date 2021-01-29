@@ -23,7 +23,7 @@ export class ContactService {
   }
 
   getContacts(): void {
-    this.httpClient.get<ContactResponse>(`${this.api}/contacts2`)
+    this.httpClient.get<ContactResponse>(`${this.api}/contacts`)
       .toPromise().then((contacts: ContactResponse) => {
         this.contactsSubject.next(contacts[0]);
       }, err => this.errorLog.showError(err, 'ContactService'));
