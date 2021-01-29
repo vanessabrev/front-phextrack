@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://api.josielfaria.com'
+  apiUrl: 'http://api.phextrack.com.br'
 };
 
 /*
