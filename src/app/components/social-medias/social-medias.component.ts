@@ -20,7 +20,6 @@ export class SocialMediasComponent implements OnInit {
   setSocialMedias(): void {
     this.socialMediaService.socialMedia$.subscribe((socialMedias: SocialMedia) => {
       this.listSocialMedias = socialMedias;
-      console.log('this.listSocialMedias', this.listSocialMedias)
     });
   }
 

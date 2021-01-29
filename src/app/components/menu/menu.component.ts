@@ -16,13 +16,10 @@ export class MenuComponent implements OnInit, AfterViewInit {
 
   constructor(private infoService: MenuService, @Inject(DOCUMENT) document: Document) {
     this.blog = document.getElementById("blog")
-    console.log('document', document)
-    console.log('this.blog', this.blog)
   }
 
   ngAfterViewInit() {
     var test = (<HTMLInputElement>document.getElementById("blog"))
-    console.log('test', test)
   }
 
 
@@ -56,7 +53,6 @@ export class MenuComponent implements OnInit, AfterViewInit {
     //   return false;
     // });
 
-    console.log("aqui!", this.blog);
     window.scrollTo(0, 0);
 
   }
