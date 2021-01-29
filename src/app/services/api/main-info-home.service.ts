@@ -25,7 +25,6 @@ export class MainInfoHomeService {
     this.httpClient.get<MainInfoHome>(`${this.api}/main-info-home`)
       .toPromise().then((infos: MainInfoHome) => {
         this.mainHomeSubject.next(infos);
-        // }, err => console.log('Erro: '+ (err.message)));
-      }, err => this.errorLog.showError(err));
+      }, err => this.errorLog.showError(err, 'MainInfoHomeService'));
   }
 }

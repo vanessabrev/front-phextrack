@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { MenuModel } from '../../models/menu.model';
+import { ErroLogService } from '../erro-log.service';
 
 @Injectable({
   providedIn: 'root'
@@ -16,6 +17,7 @@ export class MenuService {
 
   constructor(
     private httpClient: HttpClient,
+    private errorLog: ErroLogService
   ) {
     this.getMenus();
   }
@@ -24,6 +26,6 @@ export class MenuService {
     this.httpClient.get<Array<MenuModel>>(`${this.api}/menus`)
       .toPromise().then((menus: Array<MenuModel>) => {
         this.menusSubject.next(menus);
-      });
+      }, err => this.errorLog.showError(err, 'MenuService'));
   }
 }

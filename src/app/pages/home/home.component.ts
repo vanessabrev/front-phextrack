@@ -18,8 +18,9 @@ export class HomeComponent implements OnInit {
   }
 
   setMainInfoHome(): void {
-    this.mainInfoHomeService.mainHome$.subscribe((mainInfo: MainInfoHome) => {
-      this.mainInfoHome = mainInfo;
-    });
+    this.mainInfoHome = {title: 'test title', subtitle: 'sub teste', image: 'image'};
+    // this.mainInfoHomeService.mainHome$.subscribe((mainInfo: MainInfoHome) => {
+    //   this.mainInfoHome = mainInfo;
+    // });
   }
 }
