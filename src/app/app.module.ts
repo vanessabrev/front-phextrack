@@ -30,6 +30,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { InfoContactsPipe } from './pipes/info-contacts.pipe';
 import { PostalCodePipe } from './pipes/postal-code.pipe';
+import { AboutMainComponent } from './components/about-main/about-main.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { PostalCodePipe } from './pipes/postal-code.pipe';
     AboutGalleryComponent,
     AboutItensInfoComponent,
     InfoHomeComponent,
-    MainInfoComponent
+    MainInfoComponent,
+    AboutMainComponent
   ],
   imports: [
     BrowserModule,
