@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MainInfoHome } from 'src/app/models/main-info-home.model';
+import { MainInfoHomeService } from 'src/app/services/api/main-info-home.service';
 
 @Component({
   selector: 'app-main-info',
@@ -8,11 +9,18 @@ import { MainInfoHome } from 'src/app/models/main-info-home.model';
 })
 export class MainInfoComponent implements OnInit {
 
-  @Input()
   mainInfoHome: MainInfoHome;
+  constructor(private mainInfoHomeService: MainInfoHomeService) { }
 
-  constructor() { }
+  ngOnInit(): void {
+    this.setMainInfoHome();
+  }
 
-  ngOnInit(): void { }
+  setMainInfoHome(): void {
+    this.mainInfoHome = { title: 'test title', subtitle: 'sub teste', image: 'image' };
+    // this.mainInfoHomeService.mainHome$.subscribe((mainInfo: MainInfoHome) => {
+    //   this.mainInfoHome = mainInfo;
+    // });
+  }
 
 }

@@ -1,6 +1,6 @@
 export class InfoHome {
-  id: number;
+  id?: number;
   title: string;
   text: string;
-  icon: string;
+  icon?: string;
 }

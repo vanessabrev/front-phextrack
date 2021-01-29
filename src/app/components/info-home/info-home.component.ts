@@ -11,8 +11,8 @@ export class InfoHomeComponent implements OnInit {
 
   constructor(private infoHomeService: InfoHomeService) { }
 
-  mainInfoHome: InfoHome;
-  listItensInfoHome: Array<InfoHome>;
+  mainInfoHome = new InfoHome();
+  listItensInfoHome = new Array<InfoHome>();
 
   private ID_MAIN_INFO = 1;
 

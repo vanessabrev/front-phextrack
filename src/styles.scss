@@ -5,7 +5,7 @@ $fa-font-path: "~font-awesome/fonts";
 body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
-  color: #313030;
+  color: $title;
   overflow-x: hidden;
 }
 
@@ -16,6 +16,7 @@ h4,
 h5,
 h6 {
   font-family: "Raleway", sans-serif;
+  color: $title;
 }
 
 //FIXME: titulos das sections
@@ -40,3 +41,9 @@ h6 {
     width: 100%;
   }
 }
+
+// FIXME: Verificar onde tera essas propiedades: Ex: data-aos="fade-up" class="aos-init aos-animate"
+// [data-aos^=fade][data-aos^=fade].aos-animate {
+//     opacity: 1;
+//     transform: translateZ(0);
+// }

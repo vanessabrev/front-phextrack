@@ -1,7 +1,7 @@
 <!-- HOME -->
 <section class="bkg-section-2 section-home" id="home" fxLayout="row" fxLayoutAlign="space-between center"
   fxLayoutAlign.gt-sm="center center">
-  <app-main-info [mainInfoHome]="mainInfoHome"></app-main-info>
+  <app-main-info></app-main-info>
 </section>
 
 <!-- INFO HOME -->
@@ -11,16 +11,13 @@
 
 <!-- ABOUT US  -->
 <section class="bkg-section-2" id="aboutus" fxLayout="column" fxLayoutAlign="center center">
-  <app-title title="Sobre Nós"></app-title>
-  <app-about-gallery></app-about-gallery>
-  <app-about-main></app-about-main>
-  <app-about-itens-info></app-about-itens-info>
+  <app-about-main class="ajust-width"></app-about-main>
 </section>
 
 <!-- PRODUTOS -->
 <section class="bkg-section-1" id="products" fxLayout="column" fxLayoutAlign="space-around start">
-  <app-title title="Produtos"></app-title>
-  <app-card-products></app-card-products>
+  <app-title class="line-title" title="Produtos"></app-title>
+  <app-card-products class="ajust-width"></app-card-products>
 </section>
 
 <!-- CONTATOS -->
