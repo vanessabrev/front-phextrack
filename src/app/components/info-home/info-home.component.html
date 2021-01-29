@@ -1,1 +1,7 @@
-<p>info-home works!</p>
+<div fxLayout.gt-sm="row" fxLayout="row wrap" fxLayoutAlign="center center">
+  <app-card fxFlex="100" fxFlex.gt-sm="40" class="card-info-home" titleColor="#fff" textColor="#fff" color="#264173"
+    buttonName="Continuar" buttonColor="#52678f" [text]="mainInfoHome.text" [title]="mainInfoHome.title"></app-card>
+
+  <app-card *ngFor="let info of listItensInfoHome" fxFlex="100" fxFlex.gt-sm="20" fxFlex.gt-xs="80" class="card-item"
+    [text]="info.text" [icon]="info.icon" [title]="info.title" [titleSize]="20" [textSize]="14"></app-card>
+</div>

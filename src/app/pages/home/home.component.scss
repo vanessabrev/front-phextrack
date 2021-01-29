@@ -93,26 +93,6 @@ app-title {
   background-color: $bkg-section-2;
 }
 
-.card-info-home,
-.card-item {
-  margin-top: -70px;
-  margin-bottom: 1rem;
-  z-index: 1;
-  min-width: 300px;
-}
-
-.card-item {
-  z-index: 1;
-  margin: 1rem;
-  min-width: 200px;
-}
-
-@media screen and (min-width: 960px) {
-  .card-item {
-    margin: -70px 1rem 1rem 1rem;
-  }
-}
-
 @media screen and (max-width: 960px) {
   section,
   .main-cover {
