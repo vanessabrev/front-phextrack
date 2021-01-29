@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { AboutItensInfo } from 'src/app/models/about-us/about-itens-info.model';
+import { AboutUsService } from 'src/app/services/api/about-us.service';
 
 @Component({
   selector: 'app-about-itens-info',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutItensInfoComponent implements OnInit {
 
-  constructor() { }
+  @Input()
+  aboutItensInfo = new Array<AboutItensInfo>();
+
+  constructor(private aboutusService: AboutUsService) { }
 
   ngOnInit(): void {
+    this.setAboutItensInfo();
   }
+
+  setAboutItensInfo(): void {
+    this.aboutusService.aboutItensInfo$.subscribe((aboutItens: Array<AboutItensInfo>) => {
+      this.aboutItensInfo = aboutItens;
+    });
+  }
+
 
 }

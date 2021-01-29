@@ -1,26 +1,17 @@
 <div class="slideshow-container" fxLayout="row" fxLayoutAlign="center center">
 
-  <div *ngIf="slideIndex === 1" class="fade">
-    <div class="numbertext">1 / 3</div>
-    <img alt="image" src="../../../assets/about-gallery/image-1.jpg">
-  </div>
-
-  <div *ngIf="slideIndex === 2" class="fade">
-    <div class="numbertext">2 / 3</div>
-    <img alt="image" src="../../../assets/about-gallery/image-2.jpg">
-  </div>
-
-  <div *ngIf="slideIndex === 3" class="fade">
-    <div class="numbertext">3 / 3</div>
-    <img alt="image" src="../../../assets/about-gallery/image-3.jpg">
+  <div *ngFor="let item of aboutItensGallery; let index = index; trackBy: identify">
+    <div *ngIf="slideIndex === index+1" class="fade">
+      <div class="numbertext">{{ index+1 }} / {{ aboutItensGallery.length }}</div>
+      <img [alt]="item.name" [src]="item.image">
+    </div>
   </div>
 
   <a class="prev" (click)="prevSlide()">&#10094;</a>
   <a class="next" (click)="nextSlide()">&#10095;</a>
   <div class="current-slide">
-    <span [ngClass]="{active: slideIndex === 1}" class="dot" (click)="currentSlide(1)"></span>
-    <span [ngClass]="{active: slideIndex === 2}" class="dot" (click)="currentSlide(2)"></span>
-    <span [ngClass]="{active: slideIndex === 3}" class="dot" (click)="currentSlide(3)"></span>
+    <span *ngFor="let item of aboutItensGallery; let index = index; trackBy: identify" [ngClass]="{active: slideIndex === index+1}"
+      class="dot" (click)="currentSlide(index+1)"></span>
   </div>
 </div>
 <br>

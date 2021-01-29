@@ -1,0 +1,23 @@
+@import "../../shared/variables";
+
+.main-about {
+  max-width: $max-width-content;
+  padding-bottom: 3rem;
+}
+
+.about-us {
+  padding: 0 2rem;
+}
+
+.section-title {
+  font-size: 18px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.text {
+  text-align: justify;
+}

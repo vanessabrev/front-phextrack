@@ -31,8 +31,8 @@ export class AboutUsService {
   }
 
   getAboutMain(): void {
-    this.httpClient.get<AboutMain>(`${this.api}/about-us`)
-      .toPromise().then((aboutMain: AboutMain) => {
+    this.httpClient.get<Array<AboutMain>>(`${this.api}/about-us`)
+      .toPromise().then((aboutMain: Array<AboutMain>) => {
         this.aboutMainSubject.next(aboutMain[0]);
       }, err => this.errorLog.showError(err, 'AboutUsService'));
   }

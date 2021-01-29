@@ -1,1 +1,5 @@
-<p>about-itens-info works!</p>
+<div *ngFor="let item of aboutItensInfo" class="icon-box aos-init aos-animate" data-aos="fade-up">
+  <div class="icon"> <i class="fa fa-2x fa-arrow-left"></i></div>
+  <h4 class="title">{{ item.title }}</h4>
+  <p class="description"> {{ item.text }} </p>
+</div>

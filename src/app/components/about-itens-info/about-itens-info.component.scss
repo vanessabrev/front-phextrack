@@ -1,0 +1,40 @@
+@import "../../shared/variables";
+
+.icon-box {
+  margin-top: 30px;
+}
+
+.icon {
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border: 2px solid lighten($secondary, 30%);
+  border-radius: 50px;
+  transition: 1s;
+  background: #fff;
+  color: $primary;
+}
+
+.icon:hover {
+  background: $primary;
+  border: 2px solid $primary;
+  color: white;
+}
+
+.title {
+  color: $title;
+  margin-left: 85px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.description {
+  color: $title;
+  margin-left: 85px;
+  line-height: 24px;
+  font-size: 14px;
+}

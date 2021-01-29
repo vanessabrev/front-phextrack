@@ -1,1 +1,14 @@
-<p>about-main works!</p>
+<div class="main-about" fxLayout="row wrap" fxLayoutAlign="space-between center">
+
+  <app-about-gallery fxFlex.gt-sm="50"></app-about-gallery>
+
+  <div class="about-us" fxFlex.gt-sm="50" fxLayout="column" fxLayoutAlign="space-around start">
+    <div fxLayout="column" fxLayoutAlign="space-around start">
+      <h4 data-aos="fade-up" class="section-title aos-init aos-animate">Sobre nós</h4>
+      <h3 data-aos="fade-up" class="title aos-init aos-animate"> {{ aboutMainInfo.title }} </h3>
+      <p data-aos="fade-up" class="text aos-init aos-animate"> {{ aboutMainInfo.text }}  </p>
+    </div>
+
+    <app-about-itens-info></app-about-itens-info>
+  </div>
+</div>
