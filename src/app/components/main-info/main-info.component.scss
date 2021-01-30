@@ -12,6 +12,11 @@
     font-weight: 700;
     line-height: 56px;
   }
+
+  .main-title,
+  .sub-title {
+    color: white;
+  }
 }
 
 .btn-start .button {
@@ -43,7 +48,7 @@
   display: inline-block;
   position: absolute;
   background: $secondary;
-  color: #fff;
+  color: white;
   padding: 12px;
   margin-right: -10px;
   border-radius: 50%;
