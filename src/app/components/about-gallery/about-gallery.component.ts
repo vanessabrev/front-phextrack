@@ -22,7 +22,6 @@ export class AboutGalleryComponent implements OnInit {
 
   setAboutItensInfo(): void {
     this.aboutusService.aboutItensGallery$.subscribe((aboutItens: Array<AboutItensGalleryModel>) => {
-      console.log('aboutItens', aboutItens)
       this.aboutItensGallery = aboutItens;
     });
   }

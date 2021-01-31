@@ -33,7 +33,6 @@ export class ContactsComponent implements OnInit {
 
   organizeListContactsInfos(contacts: ContactModel): void {
     Object.entries(contacts).forEach(contact => {
-      console.log(contact[0], contact[1])
       if (contact[0] === 'phones') {
         this.processPhones(contact[1]);
       } else if (contact[0] === 'emails') {
@@ -47,7 +46,6 @@ export class ContactsComponent implements OnInit {
   }
 
   processAddress(arrayAddress: AddressModel): void {
-    console.log('arrayAddress   asdas', arrayAddress)
 
     let organizeAddress = this.uppercaseAllWordAddress(arrayAddress);
 
