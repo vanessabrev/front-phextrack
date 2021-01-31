@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MainInfoHomeModel } from 'src/app/models/home/main-info-home.model';
+import { MainInfoHomeModel } from 'src/app/models/info-home/main-info-home.model';
 import { MainInfoHomeService } from 'src/app/services/api/main-info-home.service';
 
 @Component({

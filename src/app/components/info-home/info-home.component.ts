@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { InfoHomeModel } from 'src/app/models/home/info-home.model';
+import { InfoHomeModel } from 'src/app/models/info-home/info-home.model';
 import { InfoHomeService } from 'src/app/services/api/info-home.service';
 
 @Component({

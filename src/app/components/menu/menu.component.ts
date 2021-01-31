@@ -1,6 +1,6 @@
 import { DOCUMENT } from '@angular/common';
 import { AfterViewInit, Component, Inject, OnInit } from '@angular/core';
-import { MenuModel } from 'src/app/models/home/menu.model';
+import { MenuModel } from 'src/app/models/info-home/menu.model';
 import { MenuService } from 'src/app/services/api/menu.service';
 
 
