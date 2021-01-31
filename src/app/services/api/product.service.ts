@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { ProductModel } from '../../models/product.model';
+import { ProductModel } from '../../models/products/product.model';
 import { ErroLogService } from '../erro-log.service';
 
 @Injectable({
