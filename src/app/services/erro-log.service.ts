@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { NotificationType } from 'src/app/models/notification.model';
+import { NotificationTypeEnum } from 'src/app/models/notification.model';
 import * as statusCodes from '../shared/status-code-http.json';
 import { NotificationService } from './notification.service';
 
@@ -21,7 +21,7 @@ export class ErroLogService {
   }
 
   showNotificationError(message: string): void {
-    let type = NotificationType.error;
+    let type = NotificationTypeEnum.error;
     this.notificationService.showMessage({ message, type });
   }
 }

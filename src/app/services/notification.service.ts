@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import { Subject } from 'rxjs';
-import { Notification, NotificationType } from '../models/notification.model';
+import { NotificationModel, NotificationTypeEnum } from '../models/notification.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class NotificationService {
 
-  private notificationSubject: Subject<Notification> = new Subject<Notification>();
+  private notificationSubject: Subject<NotificationModel> = new Subject<NotificationModel>();
 
-  showMessage(message: Notification) {
+  showMessage(message: NotificationModel) {
     this.notificationSubject.next(message);
   }
 
@@ -21,16 +21,16 @@ export class NotificationService {
   listenForMessages() {
     this.notificationSubject.subscribe(message => {
       switch (message.type) {
-        case NotificationType.success:
+        case NotificationTypeEnum.success:
           this.toastrService.success(message.message);
           break;
-        case NotificationType.error:
+        case NotificationTypeEnum.error:
           this.toastrService.error(message.message);
           break;
-        case NotificationType.warning:
+        case NotificationTypeEnum.warning:
           this.toastrService.warning(message.message);
           break;
-        case NotificationType.info:
+        case NotificationTypeEnum.info:
           this.toastrService.info(message.message);
           break;
         default:

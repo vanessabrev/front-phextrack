@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AboutItensGallery } from 'src/app/models/about-us/about-itens-gallery.model';
+import { AboutItensGalleryModel } from 'src/app/models/about-us/about-itens-gallery.model';
 import { AboutUsService } from 'src/app/services/api/about-us.service';
 
 @Component({
@@ -12,7 +12,7 @@ export class AboutGalleryComponent implements OnInit {
   slideIndex: number = 1;
   slideSize: number = 3;
 
-  aboutItensGallery = new Array<AboutItensGallery>();
+  aboutItensGallery = new Array<AboutItensGalleryModel>();
 
   constructor(private aboutusService: AboutUsService) { }
 
@@ -21,7 +21,7 @@ export class AboutGalleryComponent implements OnInit {
   }
 
   setAboutItensInfo(): void {
-    this.aboutusService.aboutItensGallery$.subscribe((aboutItens: Array<AboutItensGallery>) => {
+    this.aboutusService.aboutItensGallery$.subscribe((aboutItens: Array<AboutItensGalleryModel>) => {
       console.log('aboutItens', aboutItens)
       this.aboutItensGallery = aboutItens;
     });
@@ -39,7 +39,7 @@ export class AboutGalleryComponent implements OnInit {
     (this.slideIndex < this.slideSize) ? this.slideIndex++ : this.slideIndex = 1;
   }
 
-  identify(index: number, item: AboutItensGallery) {
+  identify(index: number, item: AboutItensGalleryModel) {
     return item.id;
   }
 }

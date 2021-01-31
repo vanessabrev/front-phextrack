@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SendEmail } from 'src/app/models/send-email.model';
+import { SendEmailModel } from 'src/app/models/send-email.model';
 
 @Component({
   selector: 'app-send-email',
@@ -8,7 +8,7 @@ import { SendEmail } from 'src/app/models/send-email.model';
 })
 export class SendEmailComponent implements OnInit {
 
-  emailForm = new SendEmail();
+  emailForm = new SendEmailModel();
 
   constructor() { }
 

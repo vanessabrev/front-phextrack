@@ -1,4 +1,4 @@
-export class SocialMedia {
+export class SocialMediaModel {
   instagram: string;
   twitter: string;
   facebook: string;

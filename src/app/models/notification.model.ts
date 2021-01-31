@@ -1,9 +1,9 @@
-export class Notification {
+export class NotificationModel {
   message: string;
-  type?: NotificationType;
+  type?: NotificationTypeEnum;
 }
 
-export enum NotificationType {
+export enum NotificationTypeEnum {
   success = 0,
   warning = 1,
   error = 2,

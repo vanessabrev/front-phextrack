@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { InfoHome } from 'src/app/models/info-home.model';
+import { InfoHomeModel } from 'src/app/models/home/info-home.model';
 import { InfoHomeService } from 'src/app/services/api/info-home.service';
 
 @Component({
@@ -11,8 +11,8 @@ export class InfoHomeComponent implements OnInit {
 
   constructor(private infoHomeService: InfoHomeService) { }
 
-  mainInfoHome = new InfoHome();
-  listItensInfoHome = new Array<InfoHome>();
+  mainInfoHome = new InfoHomeModel();
+  listItensInfoHome = new Array<InfoHomeModel>();
 
   private ID_MAIN_INFO = 1;
 
@@ -21,12 +21,12 @@ export class InfoHomeComponent implements OnInit {
   }
 
   setInfoHomes(): void {
-    this.infoHomeService.infoHome$.subscribe((infos: Array<InfoHome>) => {
+    this.infoHomeService.infoHome$.subscribe((infos: Array<InfoHomeModel>) => {
       this.organizeInfoHomes(infos);
     });
   }
 
-  organizeInfoHomes(infos: Array<InfoHome>): void {
+  organizeInfoHomes(infos: Array<InfoHomeModel>): void {
     this.mainInfoHome = infos.filter(infoHome => infoHome.id === this.ID_MAIN_INFO)[0];
     this.listItensInfoHome = infos.filter(infoHome => infoHome.id !== this.ID_MAIN_INFO);
   }

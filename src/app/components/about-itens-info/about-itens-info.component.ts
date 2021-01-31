@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { AboutItensInfo } from 'src/app/models/about-us/about-itens-info.model';
+import { AboutItensInfoModel } from 'src/app/models/about-us/about-itens-info.model';
 import { AboutUsService } from 'src/app/services/api/about-us.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { AboutUsService } from 'src/app/services/api/about-us.service';
 export class AboutItensInfoComponent implements OnInit {
 
   @Input()
-  aboutItensInfo = new Array<AboutItensInfo>();
+  aboutItensInfo = new Array<AboutItensInfoModel>();
 
   constructor(private aboutusService: AboutUsService) { }
 
@@ -19,7 +19,7 @@ export class AboutItensInfoComponent implements OnInit {
   }
 
   setAboutItensInfo(): void {
-    this.aboutusService.aboutItensInfo$.subscribe((aboutItens: Array<AboutItensInfo>) => {
+    this.aboutusService.aboutItensInfo$.subscribe((aboutItens: Array<AboutItensInfoModel>) => {
       this.aboutItensInfo = aboutItens;
     });
   }

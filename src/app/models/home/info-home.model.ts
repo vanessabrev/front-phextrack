@@ -1,4 +1,4 @@
-export class InfoHome {
+export class InfoHomeModel {
   id?: number;
   title: string;
   text: string;

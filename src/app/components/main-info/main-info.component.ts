@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MainInfoHome } from 'src/app/models/main-info-home.model';
+import { MainInfoHomeModel } from 'src/app/models/home/main-info-home.model';
 import { MainInfoHomeService } from 'src/app/services/api/main-info-home.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { MainInfoHomeService } from 'src/app/services/api/main-info-home.service
 })
 export class MainInfoComponent implements OnInit {
 
-  mainInfoHome: MainInfoHome;
+  mainInfoHome: MainInfoHomeModel;
   constructor(private mainInfoHomeService: MainInfoHomeService) { }
 
   ngOnInit(): void {

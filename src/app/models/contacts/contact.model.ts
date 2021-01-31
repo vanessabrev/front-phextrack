@@ -1,6 +1,6 @@
 
 // Esse modelo sera utilizado no front para tratar as informaceos organizadas em arrays dentro dessa aplicacao.
-export class Contact {
+export class ContactModel {
   address: string;
   phones: string;
   emails: string;
@@ -9,7 +9,7 @@ export class Contact {
 // Esse modelo sera o contrato entre o front e api.
 // Por enquanto sera utilizado para trazer as informações da api e o servico concatenate-text.service organizara
 // para a estrutura do model acima.
-export class ContactResponse {
+export class ContactResponseModel {
   address: string;
   phones: string;
   emails: string;

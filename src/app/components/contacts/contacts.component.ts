@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Address } from 'src/app/models/contacts/address.model';
-import { ContactResponse } from 'src/app/models/contacts/contact.model';
+import { AddressModel } from 'src/app/models/contacts/address.model';
+import { ContactResponseModel } from 'src/app/models/contacts/contact.model';
 import { ContactService } from 'src/app/services/api/contact.service';
 import { ConcatenateTextService } from 'src/app/services/concatenate-text.service';
 
@@ -24,12 +24,12 @@ export class ContactsComponent implements OnInit {
   }
 
   setContacts(): void {
-    this.contactService.contact$.subscribe((contacts: ContactResponse) => {
+    this.contactService.contact$.subscribe((contacts: ContactResponseModel) => {
       this.organizeListContactsInfos(contacts);
     });
   }
 
-  organizeListContactsInfos(contacts: ContactResponse): void {
+  organizeListContactsInfos(contacts: ContactResponseModel): void {
     // let fakeAddress = "rua alves<&>67<&>casa cinza<&>7184544<&><&>brasilia<&>df";
 
     const address = this.concatenateService.disengageText(contacts.address);
@@ -88,8 +88,8 @@ export class ContactsComponent implements OnInit {
     });
   }
 
-  createObjectAddress(arrayAddress: string): Address {
-    let objectAddress = new Address();
+  createObjectAddress(arrayAddress: string): AddressModel {
+    let objectAddress = new AddressModel();
     objectAddress.street = this.uppercaseFirstLetter(arrayAddress[0]);
     objectAddress.number = this.uppercaseFirstLetter(arrayAddress[1]);
     objectAddress.complement = this.uppercaseFirstLetter(arrayAddress[2]);

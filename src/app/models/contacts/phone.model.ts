@@ -1,4 +1,4 @@
-export class AddressModel {
+export class PhoneModelModel {
   street: string; //rua
   number: string;
   complement: string;

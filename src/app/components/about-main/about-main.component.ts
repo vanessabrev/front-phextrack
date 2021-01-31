@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AboutMain } from 'src/app/models/about-us/about-main.model';
+import { AboutMainModel } from 'src/app/models/about-us/about-main.model';
 import { AboutUsService } from 'src/app/services/api/about-us.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { AboutUsService } from 'src/app/services/api/about-us.service';
 })
 export class AboutMainComponent implements OnInit {
 
-  aboutMainInfo= new AboutMain();
+  aboutMainInfo= new AboutMainModel();
 
   constructor(private aboutUsService: AboutUsService) { }
 
@@ -18,7 +18,7 @@ export class AboutMainComponent implements OnInit {
   }
 
   setAboutMainInfo(): void {
-    this.aboutUsService.aboutMain$.subscribe((aboutItens: AboutMain) => {
+    this.aboutUsService.aboutMain$.subscribe((aboutItens: AboutMainModel) => {
       this.aboutMainInfo = aboutItens;
     });
   }

@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
-import { SocialMedia } from 'src/app/models/social-media.model';
+import { SocialMediaModel } from 'src/app/models/social-media.model';
 import { environment } from 'src/environments/environment';
 import { ErroLogService } from '../erro-log.service';
 
@@ -12,7 +12,7 @@ export class SocialMediasService {
 
   readonly api = environment.apiUrl;
 
-  private socialMediasSubject = new Subject<SocialMedia>();
+  private socialMediasSubject = new Subject<SocialMediaModel>();
   socialMedia$ = this.socialMediasSubject.asObservable();
 
   constructor(
@@ -23,8 +23,8 @@ export class SocialMediasService {
   }
 
   getSocialMedias(): void {
-    this.httpClient.get<Array<SocialMedia>>(`${this.api}/social-medias`)
-      .toPromise().then((socialMedias: Array<SocialMedia>) => {
+    this.httpClient.get<Array<SocialMediaModel>>(`${this.api}/social-medias`)
+      .toPromise().then((socialMedias: Array<SocialMediaModel>) => {
         this.socialMediasSubject.next(socialMedias[0]);
       }, err => this.errorLog.showError(err, 'SocialMediasService'));
   }

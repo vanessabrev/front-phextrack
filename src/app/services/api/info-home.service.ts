@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
-import { InfoHome } from 'src/app/models/info-home.model';
+import { InfoHomeModel } from 'src/app/models/home/info-home.model';
 import { environment } from 'src/environments/environment';
 import { ErroLogService } from '../erro-log.service';
 
@@ -12,7 +12,7 @@ export class InfoHomeService {
 
   readonly api = environment.apiUrl;
 
-  private infoHomesSubject = new Subject<Array<InfoHome>>();
+  private infoHomesSubject = new Subject<Array<InfoHomeModel>>();
   infoHome$ = this.infoHomesSubject.asObservable();
 
   constructor(
@@ -23,8 +23,8 @@ export class InfoHomeService {
   }
 
   getInfoHomes(): void {
-    this.httpClient.get<Array<InfoHome>>(`${this.api}/info-homes`)
-      .toPromise().then((infos: Array<InfoHome>) => {
+    this.httpClient.get<Array<InfoHomeModel>>(`${this.api}/info-homes`)
+      .toPromise().then((infos: Array<InfoHomeModel>) => {
         this.infoHomesSubject.next(infos);
       }, err => this.errorLog.showError(err, 'InfoHomeService'));
   }
