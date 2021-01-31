@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
-import { ContactResponseModel } from 'src/app/models/contacts/contact.model';
+import { ContactModel } from 'src/app/models/contacts/contact.model';
 import { environment } from 'src/environments/environment';
 import { ErroLogService } from '../erro-log.service';
 
@@ -12,8 +12,18 @@ export class ContactService {
 
   readonly api = environment.apiUrl;
 
-  private contactsSubject = new Subject<ContactResponseModel>();
+  private contactsSubject = new Subject<ContactModel>();
   contact$ = this.contactsSubject.asObservable();
+
+
+  // private adressesSubject = new Subject<Array<AddressModel>>();
+  // adresse$ = this.adressesSubject.asObservable();
+
+  // private phonesSubject = new Subject<Array<PhoneModel>>();
+  // phone$ = this.phonesSubject.asObservable();
+
+  // private emailsSubject = new Subject<Array<EmailModel>>();
+  // email$ = this.emailsSubject.asObservable();
 
   constructor(
     private httpClient: HttpClient,
@@ -23,9 +33,9 @@ export class ContactService {
   }
 
   getContacts(): void {
-    this.httpClient.get<ContactResponseModel>(`${this.api}/contacts`)
-      .toPromise().then((contacts: ContactResponseModel) => {
-        this.contactsSubject.next(contacts[0]);
+    this.httpClient.get<ContactModel>(`${this.api}/contacts`)
+      .toPromise().then((contact: ContactModel) => {
+        this.contactsSubject.next(contact);
       }, err => this.errorLog.showError(err, 'ContactService'));
   }
 }
