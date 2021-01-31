@@ -4,6 +4,7 @@ import { Subject } from 'rxjs';
 import { AboutItensGalleryModel } from 'src/app/models/about-us/about-itens-gallery.model';
 import { AboutItensInfoModel } from 'src/app/models/about-us/about-itens-info.model';
 import { AboutMainModel } from 'src/app/models/about-us/about-main.model';
+import { AboutUsModel } from 'src/app/models/about-us/about-us-model';
 import { environment } from 'src/environments/environment';
 import { ErroLogService } from '../erro-log.service';
 
@@ -25,29 +26,15 @@ export class AboutUsService {
     private httpClient: HttpClient,
     private errorLog: ErroLogService
   ) {
-    this.getAboutMain();
-    this.getAboutItensInfo();
-    this.getAboutGallery();
+    this.getAboutUs();
   }
 
-  getAboutMain(): void {
-    this.httpClient.get<Array<AboutMainModel>>(`${this.api}/about-us`)
-      .toPromise().then((aboutMain: Array<AboutMainModel>) => {
-        this.aboutMainSubject.next(aboutMain[0]);
-      }, err => this.errorLog.showError(err, 'AboutUsService'));
-  }
-
-  getAboutItensInfo(): void {
-    this.httpClient.get<Array<AboutItensInfoModel>>(`${this.api}/about-itens`)
-      .toPromise().then((aboutItens: Array<AboutItensInfoModel>) => {
-        this.aboutItensInfoSubject.next(aboutItens);
-      }, err => this.errorLog.showError(err, 'AboutUsService'));
-  }
-
-  getAboutGallery(): void {
-    this.httpClient.get<Array<AboutItensGalleryModel>>(`${this.api}/about-gallery`)
-      .toPromise().then((aboutItens: Array<AboutItensGalleryModel>) => {
-        this.aboutItensGallerySubject.next(aboutItens);
+  getAboutUs(): void {
+    this.httpClient.get<AboutUsModel>(`${this.api}/about-us`)
+      .toPromise().then((aboutUs: AboutUsModel) => {
+        this.aboutMainSubject.next(aboutUs.mainAbout[0]);
+        this.aboutItensInfoSubject.next(aboutUs.itemsAbout);
+        this.aboutItensGallerySubject.next(aboutUs.galleries);
       }, err => this.errorLog.showError(err, 'AboutUsService'));
   }
 }
