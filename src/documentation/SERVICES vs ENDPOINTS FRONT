@@ -29,20 +29,16 @@
       -about-itens-galleries.model
       -about-main.model
 
-    /contacts
+    /contacts -= OK
       -address.model
       -phone.model
       -email.model
 
-    /info-main (models- pasta home )
+    /info-home -= OK
       -menu.model
-      -main-info-home.model
-
-    /info-home (models- pasta home )
+      -main-info-home.mode
       -info-home.model
 
-    /products
+    /products -= OK
       -product.model
       -product_itens.model
-
-Refatorando service para adequar ao novo contrato com api
