@@ -19,7 +19,7 @@ export class SocialMediasService {
     private httpClient: HttpClient,
     private errorLog: ErroLogService
   ) {
-    this.getSocialMedias();
+    // this.getSocialMedias();
   }
 
   getSocialMedias(): void {

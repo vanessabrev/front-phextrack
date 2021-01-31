@@ -1,7 +1,7 @@
 import { DOCUMENT } from '@angular/common';
 import { AfterViewInit, Component, Inject, OnInit } from '@angular/core';
 import { MenuModel } from 'src/app/models/info-home/menu.model';
-import { MenuService } from 'src/app/services/api/menu.service';
+import { InfoHomeService } from 'src/app/services/api/info-home.service';
 
 
 @Component({
@@ -14,7 +14,10 @@ export class MenuComponent implements OnInit, AfterViewInit {
   blog: any;
   listMenus: Array<MenuModel>;
 
-  constructor(private infoService: MenuService, @Inject(DOCUMENT) document: Document) {
+  constructor(
+    private infoService: InfoHomeService,
+    @Inject(DOCUMENT) document: Document
+  ) {
     this.blog = document.getElementById("blog")
   }
 

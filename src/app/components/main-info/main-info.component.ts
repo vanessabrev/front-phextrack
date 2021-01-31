@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MainInfoHomeModel } from 'src/app/models/info-home/main-info-home.model';
-import { MainInfoHomeService } from 'src/app/services/api/main-info-home.service';
+import { InfoHomeService } from 'src/app/services/api/info-home.service';
 
 @Component({
   selector: 'app-main-info',
@@ -10,7 +10,7 @@ import { MainInfoHomeService } from 'src/app/services/api/main-info-home.service
 export class MainInfoComponent implements OnInit {
 
   mainInfoHome: MainInfoHomeModel;
-  constructor(private mainInfoHomeService: MainInfoHomeService) { }
+  constructor(private mainInfoHomeService: InfoHomeService) { }
 
   ngOnInit(): void {
     this.setMainInfoHome();

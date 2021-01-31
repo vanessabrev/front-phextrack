@@ -24,7 +24,7 @@
 
     /social-medias -= OK
 
-    /about-us
+    /about-us -= OK
       -about-main.model
       -about-itens-galleries.model
       -about-main.model
@@ -44,3 +44,5 @@
     /products
       -product.model
       -product_itens.model
+
+Refatorando service para adequar ao novo contrato com api
