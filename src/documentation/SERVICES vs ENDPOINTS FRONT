@@ -1,0 +1,46 @@
+
+### SERVICES vs ENDPOINTS
+
+--> Service
+      about-us
+      contact
+      info-home
+      main-info-home
+      menu
+      product
+      social-medias
+
+
+--> Endpoints
+      /about-us
+      /contacts
+      /info-main
+      /info-home
+      /products
+      /social-medias
+
+
+### RESPONSABILIDADE SERVICES vs MODEL
+
+    /social-medias -= OK
+
+    /about-us
+      -about-main.model
+      -about-itens-galleries.model
+      -about-main.model
+
+    /contacts
+      -address.model
+      -phone.model
+      -email.model
+
+    /info-main (models- pasta home )
+      -menu.model
+      -main-info-home.model
+
+    /info-home (models- pasta home )
+      -info-home.model
+
+    /products
+      -product.model
+      -product_itens.model
