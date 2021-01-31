@@ -8,8 +8,8 @@
 
   <ul class="main-nav" id="js-menu">
 
-    <li *ngFor="let menu of listMenus" id="{{menu.reference}}">
-      <a class="nav-links">{{menu.name}}</a>
+    <li *ngFor="let menu of listMenus" >
+      <a [href]="menu.reference" class="nav-links">{{menu.name}}</a>
     </li>
 
 
