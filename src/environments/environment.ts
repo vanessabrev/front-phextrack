@@ -7,7 +7,7 @@ const prod = 'http://api.phextrack.com.br';
 
 export const environment = {
   production: false,
-  apiUrl: dev
+  apiUrl: prod
 };
 
 /*
