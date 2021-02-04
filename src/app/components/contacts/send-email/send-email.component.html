@@ -1,9 +1,9 @@
 <!-- <div action="mailto:josielsifa@gmail.com" method="post" enctype="text/plain"> -->
 <div class="card-form" fxLayout="column" fxLayout.xs="column" >
   <form>
-    <div fxLayout="row wrap">
-      <app-input-text fxFlex="50" (valueText)='setValueName($event)' placeholder='Digite o seu nome'></app-input-text>
-      <app-input-text fxFlex="50" (valueText)='setValueEmail($event)' placeholder='Digite o seu email'></app-input-text>
+    <div fxLayout="column wrap" fxLayout.gt-sm="row wrap">
+      <app-input-text class="input" fxFlex="50" (valueText)='setValueName($event)' placeholder='Digite o seu nome'></app-input-text>
+      <app-input-text class="input" fxFlex="50" (valueText)='setValueEmail($event)' placeholder='Digite o seu email'></app-input-text>
     </div>
 
     <div fxLayout="row wrap" fxLayoutAlign="space-around center">
