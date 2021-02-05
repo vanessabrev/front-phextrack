@@ -1,9 +1,9 @@
-
 <div fxFlex="100" fxLayout="row wrap" fxLayoutAlign="space-around start">
   <div fxLayout="row wrap" fxLayoutAlign="center center">
     <app-info-contacts *ngFor="let contactInfo of listContactsInfos" [icon]="contactInfo.icon"
-      [title]="contactInfo.title" [information]="contactInfo.information">
+      [title]="contactInfo.title" [information]="contactInfo.information" data-aos="fade-up">
     </app-info-contacts>
   </div>
-  <app-send-email class="send-email" fxLayout="row wrap" fxLayoutAlign="center center"></app-send-email>
+  <app-send-email class="send-email" fxLayout="row wrap" fxLayoutAlign="center center" data-aos="fade-up">
+  </app-send-email>
 </div>

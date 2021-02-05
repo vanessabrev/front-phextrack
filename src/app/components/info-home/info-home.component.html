@@ -1,7 +1,9 @@
-<div fxLayout.gt-sm="row" fxLayout="row wrap" fxLayoutAlign="center center">
+<div *ngIf="mainInfoHome && mainInfoHome.title" fxLayout.gt-sm="row" fxLayout="row wrap" fxLayoutAlign="center center">
   <app-card fxFlex="100" fxFlex.gt-sm="40" class="card-info-home" titleColor="#fff" textColor="#fff" color="#264173"
-    buttonName="Continuar" buttonColor="#52678f" [text]="mainInfoHome.text" [title]="mainInfoHome.title"></app-card>
+    buttonName="Continuar" buttonColor="#52678f" [text]="mainInfoHome.text" [title]="mainInfoHome.title"
+    data-aos="fade-up" data-aos-delay="200"></app-card>
 
-  <app-card *ngFor="let info of listItensInfoHome" fxFlex="100" fxFlex.gt-sm="20" fxFlex.gt-xs="80" class="card-item"
-    [text]="info.text" [icon]="info.icon" [title]="info.title" [titleSize]="20" [textSize]="14"></app-card>
+  <app-card *ngFor="let info of listItensInfoHome; let i = index" fxFlex="100" fxFlex.gt-sm="20" fxFlex.gt-xs="80"
+    class="card-item" [text]="info.text" [icon]="info.icon" [title]="info.title" [titleSize]="20" [textSize]="14"
+    data-aos="fade-up" data-aos-delay="400"></app-card>
 </div>

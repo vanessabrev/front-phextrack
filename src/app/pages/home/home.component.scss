@@ -14,10 +14,14 @@ section {
   margin-top: 70px;
   background-image: url("../../../assets/background/background-home.jpg");
   background-size: cover;
-  height: 60vh;
+  height: 70vh;
   position: relative;
   margin: 0;
   max-width: 2000px;
+}
+
+.section-info {
+  height: 30vh;
 }
 
 .section-home:before {
