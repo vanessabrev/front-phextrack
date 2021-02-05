@@ -1,15 +1,33 @@
-<div fxLayoutAlign="center center" fxLayout="row" fxLayout.lt-sm="column wrap">
-  <div fxFlex class="card-product efecct-lux" *ngFor="let product of listProducts">
-    <div class="title-product"> {{ product.name }} </div>
-    <img class="img-product" [src]="product.image" />
+<div fxLayoutAlign="space-between stretch" fxLayout="row wrap">
+  <div fxFlex fxLayoutAlign="space-between stretch" fxLayout="column" class="card-product"
+    *ngFor="let product of listProducts" data-aos="zoom-in-up" data-aos-delay="200">
+    <div>
+      <div class="title-product"> {{ product.name }} </div>
+      <img class="img-product" [src]="product.image" [alt]="product.name" />
+    </div>
     <h3> {{ product.price | currency:'BRL':true:'1.2-2' }} <span> / month</span> </h3>
-    <p> {{ product.description }}</p>
+    <p class="description"> {{ product.description }}</p>
     <div class="card-item">
       <p *ngFor="let item of product.listDescriptions"><strong>-</strong> {{ item.description }} </p>
-      <a href="#contact">
-        <app-button text="Comprar"> </app-button>
-      </a>
     </div>
+    <a class="button-buy" href="#contact">
+      <app-button text="Comprar"> </app-button>
+    </a>
   </div>
 
+  <div fxFlex fxLayoutAlign="space-between stretch" fxLayout="column" class="card-product"
+    *ngFor="let product of listProducts" data-aos="zoom-in-up" data-aos-delay="200">
+    <div>
+      <div class="title-product"> {{ product.name }} </div>
+      <img class="img-product" [src]="product.image" [alt]="product.name" />
+    </div>
+    <h3> {{ product.price | currency:'BRL':true:'1.2-2' }} <span> / month</span> </h3>
+    <p class="description"> {{ product.description }}</p>
+    <div class="card-item">
+      <p *ngFor="let item of product.listDescriptions"><strong>-</strong> {{ item.description }} </p>
+    </div>
+    <a class="button-buy" href="#contact">
+      <app-button text="Comprar"> </app-button>
+    </a>
+  </div>
 </div>

@@ -6,54 +6,65 @@ sup {
   color: $primary;
 }
 
-.img-product {
-  width: 30vw;
-  max-width: 200px;
-  margin: 1vw auto;
-  border-radius: 50px 0px 50px 0;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-
 span {
   color: gray;
 }
 
+.img-product {
+  width: 100%;
+  border-radius: 0 0 5px 5px;
+}
+
 .title-product {
-  margin: 0 0 0.6rem;
-  background: #264173;
+  background: $primary;
   padding: 1rem;
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 15px;
   font-weight: bold;
   color: #fff;
-  box-shadow: 0px 5px 5px #888888;
-  border-radius: 8px 8px 2px 2px;
+  box-shadow: 0px 5px 5px $box-shadow-color;
+  border-radius: 5px 5px 0 0;
 }
 
 .card-product {
   background-color: #ffffff;
-  margin: 0.5vh;
+  margin: 1rem;
   border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 0 5px $box-shadow-color;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  min-width: 300px;
+  max-width: 300px;
+}
+
+//Usado para fazer o efeito de MOUSE HOVER nos card do produto
+.card-producthover {
+  background-color: #efefef;
+  transition-duration: 0.5s;
+}
+
+.description {
+  margin: 0;
+  padding: 0 1rem;
+  text-align: justify;
 }
 
 .card-item {
   text-align: center;
-  padding: 5vh;
 }
+
+.button-buy {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
 //Regra criada para o card não ficar pequeno em telas menores que 600
 @media only screen and (max-width: 600px) {
   .card-item {
-    padding: 10vh;
+    padding: 1rem;
   }
-}
 
-
-//Usado para fazer o efeito de MOUSE HOVER nos card do produto
-.efecct-lux:hover {
-  background-color: #efefef;
-  transition-duration: 0.5s;
+  .card-product {
+    max-width: 100%;
+  }
 }
