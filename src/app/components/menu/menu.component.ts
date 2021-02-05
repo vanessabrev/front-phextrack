@@ -1,38 +1,23 @@
-import { DOCUMENT } from '@angular/common';
-import { AfterViewInit, Component, Inject, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MenuModel } from 'src/app/models/info-home/menu.model';
 import { InfoHomeService } from 'src/app/services/api/info-home.service';
-
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss']
 })
-export class MenuComponent implements OnInit, AfterViewInit {
+export class MenuComponent implements OnInit {
 
   blog: any;
   listMenus: Array<MenuModel>;
+  mobileMenuOpen = true;
 
-  constructor(
-    private infoService: InfoHomeService,
-    @Inject(DOCUMENT) document: Document
-  ) {
-    this.blog = document.getElementById("blog")
-  }
-
-  ngAfterViewInit() {
-    var test = (<HTMLInputElement>document.getElementById("blog"))
-  }
-
-
-  ngOnInit(): void {
-    this.initEventsListeners();
-  }
-
-  initEventsListeners(): void {
+  constructor(private infoService: InfoHomeService) {
     this.setListMenus();
   }
+
+  ngOnInit(): void { }
 
   setListMenus(): void {
     this.infoService.menu$.subscribe((menus: Array<MenuModel>) => {
@@ -40,29 +25,12 @@ export class MenuComponent implements OnInit, AfterViewInit {
     });
   }
 
-
-  ativeToggle(event): any {
-    console.log('event', event)
-    event.classList.toggle('active');
-  }
-
-  moveScrollTransition(element): void {
-
-    // var $doc = $('html, body');
-    // $('.scrollSuave').click(function () {
-    //   $doc.animate({
-    //     scrollTop: $($.attr(this, 'href')).offset().top
-    //   }, 100);
-    //   return false;
-    // });
-
-    window.scrollTo(0, 0);
+  ativeToggle(): any {
+    this.mobileMenuOpen = !this.mobileMenuOpen;
 
   }
 
   sortMenuList(menuList: Array<MenuModel>): Array<MenuModel> {
     return menuList.sort((n1, n2) => n1.position - n2.position);
   }
-
 }
-

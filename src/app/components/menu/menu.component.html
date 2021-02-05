@@ -1,21 +1,33 @@
 <nav class="navbar">
-  <span class="navbar-toggle" id="js-navbar-toggle" (click)="ativeToggle($event)">
-   <i class="fa fa-bars fa-lg"></i>
-
+  <span class="navbar-toggle" (click)="ativeToggle()">
+    <i class="fa fa-bars fa-lg"></i>
   </span>
 
   <a href="/" class="logo-div"><img src="assets/logo-phextrack.png" alt="Logomarca da Phex Track" class="logo"></a>
 
-  <ul class="main-nav" id="js-menu">
-
-    <li *ngFor="let menu of listMenus" >
+  <ul class="main-nav">
+    <li *ngFor="let menu of listMenus">
       <a [href]="menu.reference" class="nav-links">{{menu.name}}</a>
     </li>
-
-
-    <!-- TESTE DO BASE64  -->
-    <li>
-      <a routerLink="/base64" routerLinkActive="active" class="nav-links">Base64</a>
-    </li>
   </ul>
+
 </nav>
+
+
+<!-- MENU MOBILE -->
+<div class="navbar-responsive" *ngIf="mobileMenuOpen" fxLayout="row" fxLayoutAlign="center center">
+
+  <div class="navbar-content" fxFlex="80"  data-aos="fade-right">
+    <a href="/" class="logo-div"><img src="assets/logo-phextrack.png" alt="Logomarca da Phex Track" class="logo"></a>
+
+    <ul class="main-nav-mobile">
+      <div class="divider"></div>
+      <li *ngFor="let menu of listMenus">
+        <a (click)="ativeToggle()" [href]="menu.reference" class="nav-links">{{menu.name}}</a>
+        <div class="divider"></div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="navbar-content-ajust" fxFlex="20" (click)="ativeToggle()"></div>
+</div>

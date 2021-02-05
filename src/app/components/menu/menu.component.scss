@@ -51,7 +51,7 @@
   top: 10px;
   right: 20px;
   cursor: pointer;
-  color: $text-color-contrast;
+  color: #888888;
   font-size: 24px;
 }
 
@@ -97,5 +97,43 @@
   .nav-links:hover {
     color: $primary-hover;
     border-bottom: 2px dotted $secondary;
+  }
+}
+
+/*        MOBILE            **/
+
+.navbar-responsive {
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  transition: all 0.3s;
+  background: #00000085;
+}
+
+.navbar-content {
+  background: white;
+  height: 100%;
+}
+
+.navbar-content-ajust {
+  height: 100%;
+}
+
+.main-nav-mobile {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+.divider {
+  border-bottom: 1px solid #e4e4e4;
+  margin: 1rem 0;
+}
+
+@media screen and (min-width: 900px) {
+  .navbar-responsive {
+    display: none !important;
+    background: red;
   }
 }
