@@ -29,7 +29,8 @@ section {
 }
 
 .section-info {
-  height: 30vh;
+  height: 100%;
+  min-height: 400px;
 }
 
 .section-home:before {

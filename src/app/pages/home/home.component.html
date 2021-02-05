@@ -1,16 +1,14 @@
 <!-- HOME -->
-<section class="bkg-section-2 section-home" id="home" fxLayout="row" fxLayoutAlign="space-between center"
+<section class="bkg-section-2 section-home" id="home" fxLayout="column" fxLayoutAlign="center center"
   fxLayoutAlign.gt-sm="center center">
-  <div class="container" fxLayout="row" fxLayoutAlign="center center">
-    <app-main-info></app-main-info>
-  </div>
+    <app-main-info class="adjust-width"></app-main-info>
 </section>
 
 <!-- INFO HOME -->
-<section class="bkg-section-1 section-info" id="infoHome" fxLayout.gt-sm="row" fxLayout="row wrap"
-  fxLayoutAlign="center center">
-  <div class="container" fxLayout="row" fxLayoutAlign="center center">
-    <app-info-home></app-info-home>
+<section class="bkg-section-1 section-info" id="infoHome" fxLayout="row"
+  fxLayoutAlign="space-around start">
+  <div class="container">
+    <app-info-home class="adjust-width"></app-info-home>
   </div>
 </section>
 
