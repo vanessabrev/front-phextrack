@@ -11,7 +11,7 @@ export class MenuComponent implements OnInit {
 
   blog: any;
   listMenus: Array<MenuModel>;
-  mobileMenuOpen = true;
+  mobileMenuOpen = false;
 
   constructor(private infoService: InfoHomeService) {
     this.setListMenus();

@@ -4,10 +4,8 @@
   top: 0;
   position: fixed;
   width: 100vw;
-  padding-bottom: 10px;
   font-size: 14px;
   font-family: "Poppins", sans-serif;
-  justify-content: center;
   background-color: white;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -62,7 +60,6 @@
 @media screen and (min-width: 768px) {
   .navbar {
     display: flex;
-    justify-content: space-between;
     padding-bottom: 0;
     height: 70px;
     align-items: center;
