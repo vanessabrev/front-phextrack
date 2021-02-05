@@ -6,37 +6,35 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AboutGalleryComponent } from './components/about-gallery/about-gallery.component';
-import { AboutItensInfoComponent } from './components/about-itens-info/about-itens-info.component';
-import { ButtonRoundedComponent } from './components/button-rounded/button-rounded.component';
-import { ButtonComponent } from './components/button/button.component';
-import { CardProductsComponent } from './components/card-products/card-products.component';
-import { CardComponent } from './components/card/card.component';
+import { AboutGalleryComponent } from './components/about/about-gallery/about-gallery.component';
+import { AboutItensInfoComponent } from './components/about/about-itens-info/about-itens-info.component';
+import { AboutMainComponent } from './components/about/about-main/about-main.component';
 import { CarouselPartnersComponent } from './components/carousel-partners/carousel-partners.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { InfoContactsComponent } from './components/contacts/info-contacts/info-contacts.component';
 import { SendEmailComponent } from './components/contacts/send-email/send-email.component';
-import { ContainerComponent } from './components/container/container.component';
 import { ConvertBase64Component } from './components/convert-base64/convert-base64.component';
-import { AreatextComponent } from './components/form/areatext/areatext.component';
-import { InputTextComponent } from './components/form/input-text/input-text.component';
-import { ImageUploadComponent } from './components/image-upload/image-upload.component';
-import { InfoHomeComponent } from './components/info-home/info-home.component';
-import { MainInfoComponent } from './components/main-info/main-info.component';
-import { MenuComponent } from './components/menu/menu.component';
+import { ButtonRoundedComponent } from './components/general/button-rounded/button-rounded.component';
+import { ButtonComponent } from './components/general/button/button.component';
+import { CardComponent } from './components/general/card/card.component';
+import { AreatextComponent } from './components/general/form/areatext/areatext.component';
+import { InputTextComponent } from './components/general/form/input-text/input-text.component';
+import { ImageUploadComponent } from './components/general/image-upload/image-upload.component';
+import { TitleComponent } from './components/general/title/title.component';
+import { InfoHomeComponent } from './components/home/info-home/info-home.component';
+import { MainInfoComponent } from './components/home/main-info/main-info.component';
+import { MenuComponent } from './components/home/menu/menu.component';
+import { CardProductsComponent } from './components/products/card-products/card-products.component';
 import { SocialMediasComponent } from './components/social-medias/social-medias.component';
-import { TitleComponent } from './components/title/title.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { InfoContactsPipe } from './pipes/info-contacts.pipe';
 import { PostalCodePipe } from './pipes/postal-code.pipe';
-import { AboutMainComponent } from './components/about-main/about-main.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ContainerComponent,
     PageNotFoundComponent,
     MenuComponent,
     CardComponent,
