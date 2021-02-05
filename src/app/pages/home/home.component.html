@@ -1,27 +1,38 @@
 <!-- HOME -->
 <section class="bkg-section-2 section-home" id="home" fxLayout="row" fxLayoutAlign="space-between center"
   fxLayoutAlign.gt-sm="center center">
-  <app-main-info class="ajust-width"></app-main-info>
+  <div class="container" fxLayout="row" fxLayoutAlign="center center">
+    <app-main-info></app-main-info>
+  </div>
 </section>
 
 <!-- INFO HOME -->
-<section class="bkg-section-1 section-info" id="infoHome" fxLayout.gt-sm="row" fxLayout="row wrap" fxLayoutAlign="center center">
-  <app-info-home></app-info-home>
+<section class="bkg-section-1 section-info" id="infoHome" fxLayout.gt-sm="row" fxLayout="row wrap"
+  fxLayoutAlign="center center">
+  <div class="container" fxLayout="row" fxLayoutAlign="center center">
+    <app-info-home></app-info-home>
+  </div>
 </section>
 
 <!-- ABOUT US  -->
 <section class="bkg-section-2 adjust-href" id="aboutUs" fxLayout="column" fxLayoutAlign="center center">
-  <app-about-main class="ajust-width"></app-about-main>
+  <div class="container" fxLayout="row" fxLayoutAlign="center center">
+    <app-about-main class="ajust-width"></app-about-main>
+  </div>
 </section>
 
 <!-- PRODUTOS -->
-<section class="bkg-section-1 adjust-href" id="products" fxLayout="column" fxLayoutAlign="space-around start">
-  <app-title class="line-title" title="Produtos"></app-title>
-  <app-card-products class="ajust-width"></app-card-products>
+<section class="bkg-section-1 adjust-href" id="products" fxLayout="row" fxLayoutAlign="center center">
+  <div class="container" fxLayout="column" fxLayoutAlign="space-around start">
+    <app-title class="line-title" title="Produtos"></app-title>
+    <app-card-products class="ajust-width"></app-card-products>
+  </div>
 </section>
 
 <!-- CONTATOS -->
-<section class="bkg-section-2 adjust-href" id="contacts" fxLayout="column" fxLayoutAlign="space-around start">
-  <app-title title="Contatos"></app-title>
-  <app-contacts class="ajust-width"></app-contacts>
+<section class="bkg-section-2 adjust-href" id="contacts" fxLayout="row" fxLayoutAlign="center center">
+  <div class="container" fxLayout="row wrap" fxLayoutAlign="space-around start">
+    <app-title title="Contatos"></app-title>
+    <app-contacts class="adjust-width"></app-contacts>
+  </div>
 </section>

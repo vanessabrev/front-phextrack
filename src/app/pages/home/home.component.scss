@@ -2,16 +2,20 @@
 
 section {
   margin: auto;
-  max-width: $max-width-content;
   padding-bottom: 3rem;
-}
 
-.ajust-width {
-  width: 100%;
+  .container {
+    max-width: $max-width-content;
+    width: 100%;
+  }
 }
 
 .adjust-href {
   padding-top: 70px;
+}
+
+.adjust-width {
+  width: 100%;
 }
 
 .section-home {
